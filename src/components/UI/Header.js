@@ -1,3 +1,4 @@
+import { Store } from "@mui/icons-material"
 import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material"
 import UserProfile from "./userProfile"
 
@@ -8,7 +9,8 @@ export const Header = () => {
             <AppBar position="sticky"  >
                 <Container maxWidth="xl">
                     <Toolbar >
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 ,textAlign:"start"}}>
+                        <Store  />
+                        <Typography variant="h6" component="div"  sx={{ flexGrow: 1 ,textAlign:"start",ml:"2px"}} >
                             M - Sqaure
                         </Typography>
                         <Typography position="relative" p={2}>

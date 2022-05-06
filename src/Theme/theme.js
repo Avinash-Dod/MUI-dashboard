@@ -19,12 +19,12 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     fontSize: "14px",
-                    marginBottom: "5px",
+                    marginBottom: "10px",
                     letterSpacing: "2px"
                 }
             }
         },
-        
+       
 
 
     }

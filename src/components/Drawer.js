@@ -2,7 +2,7 @@ import { Divider, IconButton, List, ListItem } from '@material-ui/core';
 import Drawer from '@mui/material/Drawer'
 
 import { useState } from 'react';
-import MenuIcon from '@material-ui/icons/Menu'
+
 import { ArrowBack, Dashboard, Inbox } from '@mui/icons-material';
 import { Typography } from '@mui/material';
 const Sidebar = () => {
