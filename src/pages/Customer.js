@@ -1,6 +1,5 @@
-import { Box, Container, Stack,Paper, Card } from "@mui/material"
+import { Box, Container, Stack, Card, Typography } from "@mui/material"
 import { DataGrid } from "@mui/x-data-grid"
-
 import { Header } from "../components/UI/Header"
 import Sidebar from "../components/UI/Sidebar/SideBarLeft"
 import UserData from '../userData.json'
@@ -28,20 +27,23 @@ const Customer = () => {
             <Stack direction="row" spacing={2} justifyContent="flex-start " >
                 <Sidebar />
                 <Container maxWidth="xl"  >
-                    <Card elevation={3} sx={{height:"60%",mt:"1%"}}>
+                    <Card elevation={3} sx={{ height: "70%", mt: "1%" }}>
+                    {/* <Typography variant="h6" component="span" color="primary">
+                        Customers
 
+                    </Typography> */}
 
-                    <DataGrid
-                        rows={row}
-                        columns={column}
-                        pageSize={10}
-                        rowsPerPageOptions={[5]}
-                        checkboxSelection
-                        disableSelectionOnClick
+                        <DataGrid
+                            rows={row}
+                            columns={column}
+                            pageSize={10}
+                            rowsPerPageOptions={[5]}
+                            checkboxSelection
+                            disableSelectionOnClick
 
-                    >
+                        >
 
-                    </DataGrid>
+                        </DataGrid>
                     </Card>
 
 

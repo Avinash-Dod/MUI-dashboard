@@ -1,6 +1,7 @@
 import { Box } from "@material-ui/core"
 import { Person, Dashboard, ModeNight, AddBusiness } from "@mui/icons-material"
 import { List, Typography, ListItemButton, ListItemIcon, Switch, ListItem, Divider, Paper } from "@mui/material"
+import { NavLink } from "react-router-dom"
 
 const Sidebar = () => {
 
@@ -9,19 +10,27 @@ const Sidebar = () => {
       <Box position="fixed">
         <List sx={{ bgcolor: "#ededed", color: "#25476a", textAlign: "center", fontWeight: "bolder", height: "1000px" }} component={Paper}>
           <ListItem disablePadding xs="0px" >
-            <ListItemButton  >
+          <ListItemButton  >
               <ListItemIcon sx={{ color: "inherit" }}>
+              <NavLink to="/" color="primary">
                 <Dashboard />
+                </NavLink>
               </ListItemIcon   >
               <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }}  >
                 Dashboard
               </Typography>
+              
             </ListItemButton>
+        
+         
           </ListItem>
+         
           <ListItem disablePadding>
             <ListItemButton  >
               <ListItemIcon sx={{ color: "inherit" }} >
+              <NavLink to="/vendor" color="primary">
                 <AddBusiness />
+                </NavLink>
               </ListItemIcon   >
               <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }}>
                 Vendor
