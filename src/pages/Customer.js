@@ -1,29 +1,52 @@
-import { Box, Card, Stack, Table, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
-import { Paper } from "@mui/material"
+import { Box, Container, Stack,Paper, Card } from "@mui/material"
+import { DataGrid } from "@mui/x-data-grid"
+
 import { Header } from "../components/UI/Header"
 import Sidebar from "../components/UI/Sidebar/SideBarLeft"
+import UserData from '../userData.json'
 
-const Customer=()=>{
-    return(
+const Customer = () => {
+    const Data = Object.values(UserData)
+    const column = [{ field: "id", headerName: "ID", width: 90 },
+    { field: "Name", headerName: "Fullname ", width: 200 },
+    { field: "email", headerName: "Email ", width: 200 },
+
+    {
+        field: "phone",
+        headerName: "Phone",
+        type: "number",
+        width: 200,
+        align: "center"
+    },
+    ]
+    const row = Data
+
+
+    return (
         <Box flex={1}  >
             <Header />
-            <Stack direction="row"  spacing={2} justifyContent="flex-start " >
-            <Sidebar />
-            <Card elevation={3}  sx={{height:"50%"}}>
-            <TableContainer  sx={{float:"left"}}>
-                <Table >
-                    <TableHead >
-                        <TableRow >
-                            <TableCell align="left">Id</TableCell>
-                            <TableCell aligm="left">Name</TableCell>
-                            <TableCell align="right">Phone</TableCell>
-                            <TableCell align="center" >Email</TableCell>
-                        </TableRow>
-                    </TableHead>
-                </Table>
+            <Stack direction="row" spacing={2} justifyContent="flex-start " >
+                <Sidebar />
+                <Container maxWidth="xl"  >
+                    <Card elevation={3} sx={{height:"60%",mt:"1%"}}>
 
-            </TableContainer>
-            </Card>
+
+                    <DataGrid
+                        rows={row}
+                        columns={column}
+                        pageSize={10}
+                        rowsPerPageOptions={[5]}
+                        checkboxSelection
+                        disableSelectionOnClick
+
+                    >
+
+                    </DataGrid>
+                    </Card>
+
+
+                </Container>
+
             </Stack>
 
         </Box>

@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <Box flex={1}>
       <Box position="fixed">
-        <List sx={{ bgcolor: "#ededed", color: "#25476a", textAlign: "center", fontWeight: "bolder",height:"1000px" }} component={Paper}>
+        <List sx={{ bgcolor: "#ededed", color: "#25476a", textAlign: "center", fontWeight: "bolder", height: "1000px" }} component={Paper}>
           <ListItem disablePadding xs="0px" >
             <ListItemButton  >
               <ListItemIcon sx={{ color: "inherit" }}>
@@ -23,7 +23,7 @@ const Sidebar = () => {
               <ListItemIcon sx={{ color: "inherit" }} >
                 <AddBusiness />
               </ListItemIcon   >
-            <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }}>
+              <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }}>
                 Vendor
               </Typography>
             </ListItemButton>

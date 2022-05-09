@@ -9,13 +9,13 @@ export const Header = () => {
             <AppBar position="sticky"  >
                 <Container maxWidth="xl">
                     <Toolbar >
-                        <Store  />
-                        <Typography variant="h6" component="div"  sx={{ flexGrow: 1 ,textAlign:"start",ml:"2px"}} >
+                        <Store />
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: "start", ml: "2px" }} >
                             M - Sqaure
                         </Typography>
                         <Typography position="relative" p={2}>
-                Admin Name
-            </Typography>
+                            Admin Name
+                        </Typography>
                         <UserProfile />
 
                     </Toolbar>

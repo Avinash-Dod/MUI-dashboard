@@ -17,12 +17,12 @@ const Sidebar = () => {
   return (
     <>
       <IconButton onClick={handleDrawerOpen} size="medium" edge="start" color="inherit" aria-label='logo' >
-        
+
         <Dashboard />
 
       </IconButton>
 
-      <Drawer variant="persistent" anchor="left" sx={{position:"relative"}} onClick={handleDrawerClose} open={open} onClose={() => handleDrawerClose()} >
+      <Drawer variant="persistent" anchor="left" sx={{ position: "relative" }} onClick={handleDrawerClose} open={open} onClose={() => handleDrawerClose()} >
         <IconButton color='inherit'  >
           <ArrowBack />
         </IconButton>
