@@ -10,42 +10,51 @@ const Sidebar = () => {
       <Box position="fixed">
         <List sx={{ bgcolor: "#ededed", color: "#25476a", textAlign: "center", fontWeight: "bolder", height: "1000px" }} component={Paper}>
           <ListItem disablePadding xs="0px" >
-          <ListItemButton  >
-              <ListItemIcon sx={{ color: "inherit" }}>
-              <NavLink to="/" color="primary">
-                <Dashboard />
-                </NavLink>
-              </ListItemIcon   >
-              <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }}  >
-                Dashboard
-              </Typography>
-              
-            </ListItemButton>
-        
-         
+            <NavLink to="/" style={{ color: "#25476a", textDecoration: "none" }}>
+              <ListItemButton  >
+
+                <ListItemIcon sx={{ color: "inherit" }}>
+
+                  <Dashboard />
+
+                </ListItemIcon   >
+                <Typography variant="h6" component="span" sx={{ color: "#25476a", letterSpacing: "1px" }}  >
+                  Dashboard
+                </Typography>
+
+              </ListItemButton>
+            </NavLink>
+
+
           </ListItem>
-         
+
           <ListItem disablePadding>
-            <ListItemButton  >
-              <ListItemIcon sx={{ color: "inherit" }} >
-              <NavLink to="/vendor" color="primary">
-                <AddBusiness />
-                </NavLink>
-              </ListItemIcon   >
-              <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }}>
-                Vendor
-              </Typography>
-            </ListItemButton>
+            <NavLink to="/vendor" style={{ color: "#25476a", textDecoration: "none" }}>
+              <ListItemButton  >
+                <ListItemIcon sx={{ color: "inherit" }} >
+
+                  <AddBusiness />
+
+                </ListItemIcon   >
+                <Typography variant="h6" component="span" sx={{ color: "#25476a", letterSpacing: "1px" }}>
+                  Vendor
+                </Typography>
+              </ListItemButton>
+            </NavLink>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon sx={{ color: "inherit" }}>
-                <Person />
-              </ListItemIcon>
-              <Typography variant="h6" component="span" sx={{ color: "25476a", letterSpacing: "1px" }} >
-                Customer
-              </Typography>
-            </ListItemButton>
+            <NavLink to="/customer" style={{ color: "#25476a", textDecoration: "none" }}>
+              <ListItemButton>
+                <ListItemIcon sx={{ color: "inherit" }}>
+
+                  <Person />
+
+                </ListItemIcon>
+                <Typography variant="h6" component="span" sx={{ color: "#25476a", letterSpacing: "1px" }} >
+                  Customer
+                </Typography>
+              </ListItemButton>
+            </NavLink>
           </ListItem>
           <Divider textAlign="center">
             <Typography variant="h6" component="span" >

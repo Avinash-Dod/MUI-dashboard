@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Card, Typography } from "@mui/material"
-import { DataGrid } from "@mui/x-data-grid"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import { Header } from "../components/UI/Header"
 import Sidebar from "../components/UI/Sidebar/SideBarLeft"
 import UserData from '../userData.json'
@@ -23,35 +23,36 @@ const Vendor = () => {
 
     return (
         <Box flex={1}  >
-        <Header />
-        <Stack direction="row" spacing={2} justifyContent="flex-start " >
-            <Sidebar />
-            <Container maxWidth="xl"  >
-                <Card elevation={3} sx={{ height: "70%", mt: "1%" }}>
-                {/* <Typography variant="h6" component="span" color="primary">
+            <Header />
+            <Stack direction="row" spacing={2} justifyContent="flex-start " >
+                <Sidebar />
+                <Container maxWidth="xl"  >
+                    <Card elevation={3} sx={{ height: "70%", mt: "1%" }}>
+                        {/* <Typography variant="h6" component="span" color="primary">
                     Vendors
 
                 </Typography> */}
 
-                    <DataGrid
-                        rows={row}
-                        columns={column}
-                        pageSize={10}
-                        rowsPerPageOptions={[5]}
-                        checkboxSelection
-                        disableSelectionOnClick
+                        <DataGrid
+                            rows={row}
+                            columns={column}
+                            pageSize={10}
+                            rowsPerPageOptions={[5]}
+                            checkboxSelection
+                            disableSelectionOnClick
+                            components={{ Toolbar: GridToolbar }}
 
-                    >
+                        >
 
-                    </DataGrid>
-                </Card>
+                        </DataGrid>
+                    </Card>
 
 
-            </Container>
+                </Container>
 
-        </Stack>
+            </Stack>
 
-    </Box>
+        </Box>
     )
 }
 export default Vendor
