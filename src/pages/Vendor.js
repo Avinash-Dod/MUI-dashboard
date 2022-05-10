@@ -1,7 +1,9 @@
-import { Box, Container, Stack, Card, Typography } from "@mui/material"
-import { DataGrid, GridToolbar } from "@mui/x-data-grid"
+import { AddBusiness } from "@mui/icons-material"
+import { Box, Container, Stack, Card, Button, Link } from "@mui/material"
+import { DataGrid, GridToolbar, } from "@mui/x-data-grid"
 import { Header } from "../components/UI/Header"
-import Sidebar from "../components/UI/Sidebar/SideBarLeft"
+import Sidebar from "../components/UI/SideBarLeft"
+
 import UserData from '../userData.json'
 
 const Vendor = () => {
@@ -13,10 +15,14 @@ const Vendor = () => {
     {
         field: "phone",
         headerName: "Phone",
-        type: "number",
+        type: "string",
         width: 200,
-        align: "center"
+        textAlign: "center"
     },
+    {
+        field: "actions", headerName: "Action", width: 300, textAlign: "center",
+        
+    }
     ]
     const row = Data
 
@@ -26,7 +32,10 @@ const Vendor = () => {
             <Header />
             <Stack direction="row" spacing={2} justifyContent="flex-start " >
                 <Sidebar />
-                <Container maxWidth="xl"  >
+                <Container maxWidth="xl" >
+                    <Link href="/addVendor" ><Button variant="contained" aria-label="Add Business" startIcon={<AddBusiness />}>Add Vendor</Button></Link>
+
+
                     <Card elevation={3} sx={{ height: "70%", mt: "1%" }}>
                         {/* <Typography variant="h6" component="span" color="primary">
                     Vendors

@@ -1,5 +1,5 @@
 import { Box } from "@material-ui/core"
-import { Person, Dashboard, ModeNight, AddBusiness } from "@mui/icons-material"
+import { Person, Dashboard, ModeNight, Store } from "@mui/icons-material"
 import { List, Typography, ListItemButton, ListItemIcon, Switch, ListItem, Divider, Paper } from "@mui/material"
 import { NavLink } from "react-router-dom"
 
@@ -33,7 +33,7 @@ const Sidebar = () => {
               <ListItemButton  >
                 <ListItemIcon sx={{ color: "inherit" }} >
 
-                  <AddBusiness />
+                  <Store />
 
                 </ListItemIcon   >
                 <Typography variant="h6" component="span" sx={{ color: "#25476a", letterSpacing: "1px" }}>

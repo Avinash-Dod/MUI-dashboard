@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-
 export const theme = createTheme({
     palette: {
         primary: {
@@ -20,21 +19,30 @@ export const theme = createTheme({
                 root: {
                     fontSize: "14px",
                     marginBottom: "10px",
-                    letterSpacing: "2px"
+                    letterSpacing: "2px",
+                    marginTop: "1%"
+
                 }
             }
         },
-        MuiIconButton:{
-            styleOverrides:{
-                root:{
-                    textDecoration:"none"
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "25px",
                 }
             }
-        }
-       
-        
-       
-       
+        },
+        MuiCardContent: {
+            styleOverrides: {
+                root: {
+                    padding: "10px 10px 0px 10px",
+                    width: "50%",
+                    margin: "auto",
+                }
+            }
+        },
+      
+
 
 
     }

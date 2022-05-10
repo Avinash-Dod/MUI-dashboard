@@ -1,7 +1,9 @@
-import { Box, Container, Stack, Card, } from "@mui/material"
+import { CardActions } from "@material-ui/core"
+import { AddBusiness } from "@mui/icons-material"
+import { Box, Container, Stack, Card, Button, } from "@mui/material"
 import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import { Header } from "../components/UI/Header"
-import Sidebar from "../components/UI/Sidebar/SideBarLeft"
+import Sidebar from "../components/UI/SideBarLeft"
 import UserData from '../userData.json'
 
 const Customer = () => {
@@ -27,6 +29,7 @@ const Customer = () => {
             <Stack direction="row" spacing={2} justifyContent="flex-start " >
                 <Sidebar />
                 <Container maxWidth="xl"  >
+                   
                     <Card elevation={3} sx={{ height: "70%", mt: "1%" }}>
                         {/* <Typography variant="h6" component="span" color="primary">
                         Customers
