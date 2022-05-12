@@ -1,9 +1,8 @@
-import { CardActions } from "@material-ui/core"
-import { AddBusiness } from "@mui/icons-material"
-import { Box, Container, Stack, Card, Button, } from "@mui/material"
+import { Box, Container, Stack, } from "@mui/material"
 import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import { Header } from "../components/UI/Header"
 import Sidebar from "../components/UI/SideBarLeft"
+import { PageText, PCard } from "../components/UI/UI"
 import UserData from '../userData.json'
 
 const Customer = () => {
@@ -24,38 +23,33 @@ const Customer = () => {
 
 
     return (
-        <Box flex={1}  >
+        <Box >
             <Header />
-            <Stack direction="row" spacing={2} justifyContent="flex-start " >
+            <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" >
                 <Sidebar />
-                <Container maxWidth="xl"  >
-                   
-                    <Card elevation={3} sx={{ height: "70%", mt: "1%" }}>
-                        {/* <Typography variant="h6" component="span" color="primary">
-                        Customers
+                <Container style={{ marginTop: "35px" }} maxWidth='100%' >
+                    <PageText variant="h4" component="span" name="Vendor" />
 
-                    </Typography> */}
-
-                        <DataGrid
+                    <PCard elevation={4}
+                        content={<DataGrid
                             rows={row}
                             columns={column}
                             pageSize={10}
-                            rowsPerPageOptions={[5, 7, 25]}
+                            pagination
+                            rowsPerPageOptions={[5]}
                             checkboxSelection
+                            density="standard"
                             disableSelectionOnClick
-                            components={{ Toolbar: GridToolbar }}
-                        >
-
-                        </DataGrid>
-                    </Card>
-
+                            sx={{ height: "100%", width: "100%", color: "#000000" }}
+                        />}
+                    >
+                    </PCard>
 
                 </Container>
 
             </Stack>
 
         </Box>
-
     )
 }
 export default Customer

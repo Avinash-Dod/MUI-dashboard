@@ -1,21 +1,20 @@
-import { Store } from "@mui/icons-material"
-import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material"
+import { AppBar, Avatar, Box, Container, Toolbar, Typography } from "@mui/material"
 import UserProfile from "./userProfile"
+import Logo from '../../assets/logo-icon.png'
 
 
 export const Header = () => {
     return (
         <Box >
-            <AppBar position="sticky"  >
-                <Container maxWidth="xl">
+            <AppBar position="static"   >
+                <Container maxWidth="xl" >
                     <Toolbar >
-                        <Store />
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: "start", ml: "2px" }} >
-                            M - Sqaure
+                        <Avatar sx={{borderRadius:"0px",padding:2,bgcolor:"transparent"}}><img  src={Logo} style={{backgroundColor:"white",color:"#30Add"}} alt="Logo" color="inherit" /></Avatar>
+
+                        <Typography variant="h6" component="span" sx={{ flexGrow: 1, textAlign: "start", ml: "2px", color: "#ffffff" }} >
+                            Sqaure
                         </Typography>
-                        <Typography position="relative" p={2}>
-                            Admin Name
-                        </Typography>
+                        
                         <UserProfile />
 
                     </Toolbar>

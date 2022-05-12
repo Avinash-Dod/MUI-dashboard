@@ -1,9 +1,9 @@
 
+import { KeyboardArrowDown } from "@mui/icons-material";
 import { Avatar, IconButton, Menu, MenuItem, Tooltip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { useState } from "react";
-
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Your Profile', 'Logout'];
 const UserProfile = () => {
 
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -16,13 +16,22 @@ const UserProfile = () => {
   return (
     <Box sx={{ flexGrow: 0 }}>
 
-      <Tooltip title="Open settings" >
+      <Tooltip title="Open Profile settings" >
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} edge="end">
           <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
 
+          <Typography variant="body1" component="span" sx={{ margin: "0px 10px 0px 10px ", float: "right", textAlign: "left", color: "#ffffff" }}>
+            Admin Name
+            <br></br>
+            admin@gmail.com
+          </Typography>
+
+
+          <KeyboardArrowDown color="white" />
+
         </IconButton>
       </Tooltip>
-      <Menu
+      <Menu 
         sx={{ mt: '45px' }}
         id="menu-appbar"
         anchorEl={anchorElUser}
