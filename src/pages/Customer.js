@@ -1,8 +1,10 @@
+import { Add } from "@mui/icons-material"
 import { Box, Container, Stack, } from "@mui/material"
 import { DataGrid, GridToolbar } from "@mui/x-data-grid"
-import { Header } from "../components/UI/Header"
-import Sidebar from "../components/UI/SideBarLeft"
-import { PageText, PCard } from "../components/UI/UI"
+import { Header } from "../components/Header"
+import Sidebar from "../components/SideBarLeft"
+
+import { AddButton, PageContainer, PageText, PCard } from "../components/UI/UI"
 import UserData from '../userData.json'
 
 const Customer = () => {
@@ -24,32 +26,38 @@ const Customer = () => {
 
     return (
         <Box >
-            <Header />
-            <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" >
-                <Sidebar />
-                <Container style={{ marginTop: "35px" }} maxWidth='100%' >
-                    <PageText variant="h4" component="span" name="Vendor" />
+        <Header />
+        <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" height='100%' >
+            <Sidebar />
+            <PageContainer style={{ height:"50em" }} maxWidth='100%' >
+                
+                <PageText variant="h4" component="span" name="Customer" width="5%" color="#30AADD" mt="35px" />
+                
+                
+                <PCard elevation={4} width="95%" margin="10% 0px 0px 0px" height="60%"
+                    content={<DataGrid
+                        rows={row}
+                       
+                        
+                        columns={column}
+                        pageSize={10}
+                        pagination
+                       filterMode="server"
+                    
+                        rowsPerPageOptions={[5]}
+                        checkboxSelection
+                        density="standard"
+                        disableSelectionOnClick
+                        sx={{ height: "100%", width: "100%", color: "#000000" }}
+                    />}
+                >
+                </PCard>
 
-                    <PCard elevation={4}
-                        content={<DataGrid
-                            rows={row}
-                            columns={column}
-                            pageSize={10}
-                            pagination
-                            rowsPerPageOptions={[5]}
-                            checkboxSelection
-                            density="standard"
-                            disableSelectionOnClick
-                            sx={{ height: "100%", width: "100%", color: "#000000" }}
-                        />}
-                    >
-                    </PCard>
+            </PageContainer>
 
-                </Container>
+        </Stack>
 
-            </Stack>
-
-        </Box>
+    </Box>
     )
 }
 export default Customer

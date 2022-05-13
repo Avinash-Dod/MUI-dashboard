@@ -1,8 +1,8 @@
 
 import { Box, Container, Stack, Paper } from "@mui/material"
-import RegisterForm from "./forms/registerForm"
-import { Header } from "./UI/Header"
-import Sidebar from "./UI/SideBarLeft"
+import { Header } from "./Header"
+import Sidebar from "./SideBarLeft"
+
 
 const AddVendor = () => {
     return (
@@ -12,7 +12,7 @@ const AddVendor = () => {
                 <Sidebar />
                 <Container maxWidth="xl" >
                     <Paper elevation={3} >
-                        <RegisterForm />
+                        
                     </Paper>
 
                 </Container>

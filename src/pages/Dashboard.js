@@ -1,12 +1,11 @@
 import { ArrowDropUp, ArrowRightAlt } from "@mui/icons-material"
-import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material"
-
-import { Header } from "../components/UI/Header"
-import Sidebar from "../components/UI/SideBarLeft"
-import { PageText } from "../components/UI/UI"
+import { Box, Button, Card, CardContent, Container, Grid, Stack, styled, Typography } from "@mui/material"
+import { Header } from "../components/Header"
+import Sidebar from "../components/SideBarLeft"
+import { CardButton, PageText } from "../components/UI/UI"
 
 const Dashboard = () => {
-
+   
 
 
     const Vendors = [{ 1560: "All Vendors" }, { 200: "Active Vendors" }, { 300: "Inactive Vendors" }]
@@ -48,7 +47,8 @@ const Dashboard = () => {
 
                                     </CardContent>
                                     <CardContent>
-                                        <Button variant="contained" endIcon={<ArrowRightAlt />} >View</Button>
+                                        <CardButton variant="contained" name="View" endIcon={<ArrowRightAlt />} />
+
                                     </CardContent>
 
 
@@ -84,7 +84,7 @@ const Dashboard = () => {
 
                                     </CardContent>
                                     <CardContent>
-                                        <Button variant="contained" endIcon={<ArrowRightAlt />} >View</Button>
+                                        <CardButton variant="contained" name="View" endIcon={<ArrowRightAlt />} />
                                     </CardContent>
 
 
@@ -94,7 +94,7 @@ const Dashboard = () => {
                         ))}
 
                     </Grid>
-                    
+
                     <PageText name="Subscriber" variant="h5" component="div" display="block" />
                     <Grid container marginTop={1}
                         spacing={3}                    >
@@ -119,9 +119,7 @@ const Dashboard = () => {
 
 
                                     </CardContent>
-                                    <CardContent>
-                                        <Button variant="contained" endIcon={<ArrowRightAlt />} >View</Button>
-                                    </CardContent>
+
 
 
                                 </Card>
@@ -130,7 +128,7 @@ const Dashboard = () => {
                         ))}
 
                     </Grid>
-                    
+
                 </Container>
 
             </Stack>

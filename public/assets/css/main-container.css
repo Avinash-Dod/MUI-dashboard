@@ -19,6 +19,10 @@ header {
     position: fixed;
     z-index: 99;
 }
+.active ListITemButton{
+    color: #253858;
+    
+}
 .arrows-icon-box{
   margin-right: 48px;
 }

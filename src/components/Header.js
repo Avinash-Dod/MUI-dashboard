@@ -1,6 +1,7 @@
 import { AppBar, Avatar, Box, Container, Toolbar, Typography } from "@mui/material"
-import UserProfile from "./userProfile"
-import Logo from '../../assets/logo-icon.png'
+import Logo from '../assets/logo-icon.png'
+import UserProfile from "./UI/userProfile"
+
 
 
 export const Header = () => {

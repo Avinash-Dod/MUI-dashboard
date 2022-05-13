@@ -3,6 +3,7 @@ import { KeyboardArrowDown } from "@mui/icons-material";
 import { Avatar, IconButton, Menu, MenuItem, Tooltip, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 const settings = ['Your Profile', 'Logout'];
 const UserProfile = () => {
 
@@ -47,11 +48,15 @@ const UserProfile = () => {
         open={Boolean(anchorElUser)}
         onClose={handleCloseUserMenu}
       >
-        {settings.map((setting) => (
-          <MenuItem key={setting} onClick={handleCloseUserMenu}>
-            <Typography textAlign="center">{setting}</Typography>
+       
+          <MenuItem  onClick={handleCloseUserMenu}>
+            <NavLink to="/profile" style={{ textDecoration: "none",color:"#212529" }}><Typography textAlign="center" >Your Profile</Typography></NavLink>
+            
           </MenuItem>
-        ))}
+          <MenuItem  onClick={handleCloseUserMenu}>
+            <Typography textAlign="center">Logout</Typography>
+            
+          </MenuItem>
       </Menu>
     </Box>
   )

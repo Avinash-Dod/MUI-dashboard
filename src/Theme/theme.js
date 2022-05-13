@@ -4,22 +4,12 @@ export const theme = createTheme({
     palette: {
         primary: {
             main: "#30AADD",
-            light: "#25676a"
-
+            
         },
         secondary: {
             main: "#212529"
-        },
-        white: {
-            main: "#ffffff"
         }
-
-
-
     },
-
-
-
     components: {
         MuiButton: {
             styleOverrides: {
@@ -29,23 +19,21 @@ export const theme = createTheme({
                     padding: "5px 25px",
                     position: "relative",
                     borderRadius: "50px",
-
-                    color: "#ffffff"
-
+                    
+                   
                 }
             }
         },
+       
         MuiCard: {
             styleOverrides: {
                 root: {
                     borderRadius: "25px",
                     padding: "22px",
-                    height: "70%",
-
-
-
-
-
+                    maxHeight: "70%",
+                    height: "auto",
+                    marginBottom:"30px"
+                    
                 }
             }
         },
@@ -53,15 +41,28 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     padding: "0px 10px 0px 0px",
-                    marginBottom: "0px"
-
+                    marginBottom: "0px",
                 }
             }
         },
-
-
-
-
+       MuiListItemButton:{
+           styleOverrides:{
+               root:{
+                   borderRadius:"8px",
+                   color:"#ffffff"
+               }
+           }
+       },
+       MuiInputLabel:{
+           styleOverrides:{
+               root:{
+                   color:"#212529",
+                   textAlign:"left"
+               }
+           }
+       }
+     
+       
 
     }
 }
