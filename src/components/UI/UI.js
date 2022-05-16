@@ -1,6 +1,7 @@
 
 import { ModeEdit } from "@mui/icons-material"
-import { Avatar, Button, Card, Container, IconButton, Input, Link, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
+import { Avatar, Button, Card, Container, Dialog, Link, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
+
 
 
 export const PageText = (props) => {
@@ -24,25 +25,21 @@ export const PageText = (props) => {
 
 
 export const SideList = (props) => {
-    const { Icon, Text } = props
+    const { Text } = props
 
     return (
         <ListItem disablePadding  >
-
             <ListButton sx={{ '&.Mui-active': { color: "#30AADD" } }} className="active">
-
                 <ListHeading variant="body1" component="span"   >
                     {Text}
                 </ListHeading>
-
             </ListButton>
-
         </ListItem>
     )
 }
 
 export const AddButton = (props) => {
-    const { href, size, startIcon, endIcon, name } = props
+    const { href, size, startIcon, endIcon, name, onClick } = props
     return (
         <Link href={href} ><Button variant="contained"
             size={size}
@@ -52,6 +49,7 @@ export const AddButton = (props) => {
             }}
             startIcon={startIcon}
             endIcon={endIcon}
+            onClick={onClick}
         >
             {name}
         </Button></Link>
@@ -119,19 +117,22 @@ box-shadow:1px 1px 1px 1px #ededed;
 `;
 export const InputField = styled(TextField)`
 fieldset{
-    border-radius:50px;
-
-    
-    
+    border-radius:50px;  
 };
 background-color:#F4F5F7;
-
 border-radius:50px;
 width:100%;
 margin-top:2%;
+margin-bottom:2%;
 `;
 export const SubmitButton = styled(Button)`
 color:#ffffff;
 width:60%;
 padding:10px 45px;
 `
+export const FormDialog = styled(Dialog)`
+PaperProps:{
+    border-radius:50px;
+    background:#30AADD;
+}
+`;

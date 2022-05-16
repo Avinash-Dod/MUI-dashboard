@@ -1,22 +1,22 @@
 
 import { Close } from "@mui/icons-material";
-import { Dialog, DialogTitle, DialogContent, InputLabel, DialogActions, Grid, IconButton, Select, MenuItem } from "@mui/material"
+import { Dialog, DialogTitle, DialogContent, InputLabel, DialogActions, Grid, IconButton, Select, MenuItem, NativeSelect } from "@mui/material"
 import { InputField, PageText, SubmitButton } from "../UI/UI";
 
-const AddVendor = (props) => {
+const EditVendor = (props) => {
     const handleClose = () => {
-        props.close(false)
+        props.closeEdit(false)
     };
 
     return (
         <Dialog
-            open={props.open}
+            open={props.edit}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
             <DialogTitle id="alert-dialog-title">
-                <PageText name="Add New Vendor" variant="h6" component="span" />
+                <PageText name="Vendor Edit" variant="h6" component="span" />
                 <IconButton onClick={handleClose} sx={{ width: "10%", float: "right", position: "relative" }}>
                     <Close />
                 </IconButton>
@@ -35,16 +35,17 @@ const AddVendor = (props) => {
                 <InputField variant="outlined" size="small" placeholder="Number" />
 
                 <InputLabel>Address</InputLabel>
-                <Select fullWidth
-                    label="Select Address"
-                    value={30}
-        
-                >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-
+                <Select fullWidth 
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={30}
+    label="Age"
+    
+  >
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
+  </Select>
 
                 <InputLabel>Location Map</InputLabel>
                 <iframe
@@ -52,7 +53,6 @@ const AddVendor = (props) => {
                     width="100%"
                     height="300px"
                     allowFullScreen="" loading="lazy" title="map" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
             </DialogContent>
             <DialogActions>
                 <Grid item xs={6} textAlign="left">
@@ -62,4 +62,4 @@ const AddVendor = (props) => {
         </Dialog>
     )
 }
-export default AddVendor
+export default EditVendor

@@ -1,44 +1,69 @@
 [
   {
-    "id": 1,
-    "Name": "Ramesh",
+    "id":1,
+    "Name": "Alexa Smith",
+    "type":"Apna Sweets",
+    "email": "alexasmith@gmail.com",
     "phone": "7894561230",
-    "email": "ramesh@gmail.com"
+    "location":"Vijay Nagar Indore"
+    
   },
   {
-    "id": 2,
-    "Name": "Ramesh",
+    "id":2,
+    "Name": "Alexa Smith",
+    "type":"Apna Sweets",
+    "email": "alexasmith@gmail.com",
     "phone": "7894561230",
-    "email": "ramesh@gmail.com"
+    "location":"Vijay Nagar Indore"
+    
   },
   {
     "id": 3,
-    "Name": "Ramesh",
+    "Name": "Alexa Smith",
+    "type":"Apna Sweets",
+    "email": "alexasmith@gmail.com",
     "phone": "7894561230",
-    "email": "ramesh@gmail.com"
+    "location":"Vijay Nagar Indore"
   },
   {
-    "id": 4,
-    "Name": "Ramesh",
+    "id":4,
+    "Name": "Alexa Smith",
+    "type":"Apna Sweets",
+    "email": "alexasmith@gmail.com",
     "phone": "7894561230",
-    "email": "ramesh@gmail.com"
+    "location":"Vijay Nagar Indore"
+    
   },
   {
-    "id": 5,
-    "Name": "Ramesh",
+    "id":5,
+    "Name": "Alexa Smith",
+    "type":"Apna Sweets",
+    "email": "alexasmith@gmail.com",
     "phone": "7894561230",
-    "email": "ramesh@gmail.com"
+    "location":"Vijay Nagar Indore"
+    
   },
   {
-    "id": 6,
-    "Name": "Ramesh",
-    "phone": "7894561230",
-    "email": "ramesh@gmail.com"
+    "id":6,
+    "Name": "Alexa Smith",
+    "email": "alexasmith@gmail.com",
+    "location":"Vijay Nagar Indore"
+    
   },
   {
     "id": 7,
     "Name": "Ramesh",
     "phone": "7894561230",
     "email": "ramesh@gmail.com"
+    
+  },
+  {
+    "id":8,
+    "Name": "Alexa Smith",
+    "email": "alexasmith@gmail.com",
+    "location":"Vijay Nagar Indore"
+    
   }
+
+  
 ]

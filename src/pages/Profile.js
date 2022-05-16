@@ -1,9 +1,9 @@
-import { Edit, ModeEdit, PersonPinCircle } from "@mui/icons-material"
-import { Avatar, Badge, Box, Button, Container, FormControl, Grid, IconButton, Input, InputLabel, Stack, TextField } from "@mui/material"
+import {  PersonPinCircle } from "@mui/icons-material"
+import { Badge, Box, Button, Grid,IconButton,InputLabel, Stack,} from "@mui/material"
 
-import { Header } from "./Header"
-import Sidebar from "./SideBarLeft"
-import { InputField, PageContainer, PageText, PCard, Pencil, ProfilePic, SubmitButton, } from "./UI/UI"
+import { Header } from "../components/Header"
+import Sidebar from "../components/SideBarLeft"
+import { InputField, PageContainer, PageText, PCard, Pencil, ProfilePic, SubmitButton, } from "../components/UI/UI"
 
 const Profile = () => {
 
@@ -18,22 +18,34 @@ const Profile = () => {
 
                         content={
                             <Box>
-
                                 <Box sx={{ marginBottom: 5 }}>
                                     <Badge
                                         overlap="circular"
+                                        
                                         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                                         badgeContent={
-                                            
-                                            <Pencil fontSize="small" />
+                                            <>
+                                            <input
+                                            accept="image/*"                                            
+                                            id="icon-button-photo"                                            
+                                            type="file"
+                                            hidden
+                                        />
+                                        <label htmlFor="icon-button-photo">
+                                            <IconButton color="primary" component="span">
+                                            <Pencil fontSize="small"  />
+                                            </IconButton>
+                                        </label>
+                                        </>                       
                                             
                                         }
-
+                                        
+                                    
                                     >
                                         <ProfilePic src={<PersonPinCircle />} />
                                     </Badge>
                                 </Box>
-                               
+<form >
                                 <Grid container spacing={2}>
                                     <Grid item xs={6} >
                                         <InputLabel>Name</InputLabel>
@@ -50,13 +62,13 @@ const Profile = () => {
                                     <Grid item xs={6}>
                                         <InputLabel>Date of Birth</InputLabel>
                                         <InputField variant="outlined" size="small" type="date" />
-
                                     </Grid>
                                     <Grid item xs={6} textAlign="left">
-                                        <SubmitButton variant="contained" size="large">Save</SubmitButton>
+                                        <SubmitButton variant="contained" type="submit" size="large">Save</SubmitButton>
                                     </Grid>
-
                                 </Grid>
+                                </form>
+
                             </Box>
 
                         }

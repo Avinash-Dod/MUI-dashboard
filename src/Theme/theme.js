@@ -57,11 +57,27 @@ export const theme = createTheme({
            styleOverrides:{
                root:{
                    color:"#212529",
-                   textAlign:"left"
+                   textAlign:"left",
+                   
                }
            }
-       }
-     
+       },
+       MuiDialog:{
+           styleOverrides:{
+               paper:{
+                   borderRadius:"25px",
+                   flex:"1 1 auto",     
+                   padding:"10px 0px 10px 0"       
+               },
+               root:{
+                   overflow:"hidden"
+               }
+           }
+       },
+       
+       
+      
+    
        
 
     }

@@ -12,11 +12,11 @@ const Dashboard = () => {
     const Customers = [{ 1560: "All Customers" }, { 200: "Active Customers" }, { 300: "Inactive Customers" }]
     const Subscribers = [{ 1560: "Free Subscribers" }, { 200: "Paid Subscribers" }, { 300: "Expired Subscribers" }]
     return (
-        <Box >
+        <Box>
             <Header />
             <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" >
                 <Sidebar />
-                <Container style={{ marginTop: "35px" }} maxWidth='100%' >
+                <Container style={{ marginTop: "35px", }} maxWidth='70%' >
                     <PageText name="Dashboard" variant="h4"
                         component="div"
                         color="#30AADD"
