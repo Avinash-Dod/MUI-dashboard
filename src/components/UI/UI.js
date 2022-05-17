@@ -1,12 +1,11 @@
 
 import { ModeEdit } from "@mui/icons-material"
-import { Avatar, Button, Card, Container, Dialog, Link, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
-
+import { Avatar, Button, Card, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
 
 
 export const PageText = (props) => {
-    const { variant, component, name, color, display, width, padding, mt } = props
 
+    const { variant, component, name, color, display, width, padding, mt, textAlign } = props
     return (
         <Typography variant={variant} component={component} name={name} color={color}
             sx={{
@@ -15,21 +14,19 @@ export const PageText = (props) => {
                 fontWeight: "bold",
                 display: { display },
                 paddingBottom: { padding },
-                marginTop: mt
-
+                marginTop: mt,
+                textAlign: textAlign
             }} >
             {name}
         </Typography>
     )
 }
 
-
 export const SideList = (props) => {
     const { Text } = props
-
     return (
-        <ListItem disablePadding  >
-            <ListButton sx={{ '&.Mui-active': { color: "#30AADD" } }} className="active">
+        <ListItem disablePadding>
+            <ListButton   >
                 <ListHeading variant="body1" component="span"   >
                     {Text}
                 </ListHeading>
@@ -39,9 +36,9 @@ export const SideList = (props) => {
 }
 
 export const AddButton = (props) => {
-    const { href, size, startIcon, endIcon, name, onClick } = props
+    const { size, startIcon, endIcon, name, onClick } = props
     return (
-        <Link href={href} ><Button variant="contained"
+        <Button variant="contained"
             size={size}
             sx={{
                 float: "right", borderRadius: "50px", margin: " 0px",
@@ -52,7 +49,7 @@ export const AddButton = (props) => {
             onClick={onClick}
         >
             {name}
-        </Button></Link>
+        </Button>
     )
 }
 
@@ -61,20 +58,32 @@ export const PCard = (props) => {
     return (
         <Card elevation={elevation} sx={{ height: height, width: { width }, color: "Black", textAlign: textAlign, float: float, margin: margin, padding: padding }}>
             {content}
-
         </Card>
     )
 }
-export const CardButton = (props) => {
-    const { size, startIcon, endIcon, name } = props
+
+export const LoginCard = (props) => {
+    const { elevation, content, width, textAlign, float, margin, padding, height, bgColor } = props
+
     return (
+        <Card elevation={elevation} sx={{ height: height, width: { width }, backgroundColor: bgColor, color: "#ffffff", textAlign: textAlign, float: float, margin: margin, padding: padding }}>
+            {content}
+        </Card>
+    )
+}
+
+export const CardButton = (props) => {
+    const { size, startIcon, endIcon, name, } = props
+    return (
+
         <Button size={size} startIcon={startIcon} endIcon={endIcon} variant="contained" sx={{ color: "#ffffff" }}>{name}</Button>
+
     )
 }
 // 
 export const ListButton = styled(ListItemButton)`
 &:hover {
-    background-color: #F7F5FF;
+    background: #F7F5FF;
     color:#30AADD;
     border-radius:8px;
     overflow:"hidden";
@@ -92,11 +101,17 @@ font-size: 16px;
 font-weight: bold;
 line-height: 20px;
 
+
   
 `;
 export const PageContainer = styled(Container)`
-background-color:#fafafa;
-  
+width: 84%;
+position: relative;
+left: 15%;
+background:#fafafa;
+top: 72px;
+height:50em;
+} 
 `;
 export const ProfilePic = styled(Avatar)`
 width: 120px;
@@ -116,14 +131,22 @@ color:#ffffff;
 box-shadow:1px 1px 1px 1px #ededed;
 `;
 export const InputField = styled(TextField)`
-fieldset{
-    border-radius:50px;  
+fieldset{ 
+    border-radius:50px;      
 };
-background-color:#F4F5F7;
+
 border-radius:50px;
 width:100%;
 margin-top:2%;
 margin-bottom:2%;
+`;
+export const LoginField = styled(Input)`
+input{
+    color:#ffffff;    
+};
+width:100%;
+margin-top:3%;
+margin-bottom:3%;
 `;
 export const SubmitButton = styled(Button)`
 color:#ffffff;
@@ -136,3 +159,15 @@ PaperProps:{
     background:#30AADD;
 }
 `;
+export const Logo = styled(Avatar)`
+color: #fff;
+font-size: 36px;
+font-weight: 600;
+line-height: 40px;
+border-radius:0px;
+text-decoration: none;
+background-color: transparent;
+vertical-align: middle;
+border-style: none;
+width: 150px;
+`

@@ -2,13 +2,13 @@ import { Delete, ModeEdit } from "@mui/icons-material"
 import { Box, IconButton, Stack, Switch, } from "@mui/material"
 import { DataGrid, GridToolbarFilterButton } from "@mui/x-data-grid"
 import { useState } from "react"
-import { Header } from "../components/Header"
-import EditCustomer from "../components/Modals/CustomerEdit"
-import Sidebar from "../components/SideBarLeft"
-import { PageContainer, PageText, PCard } from "../components/UI/UI"
-import UserData from '../userData.json'
+import { Header } from "../../components/Header"
+import EditCustomer from "../../components/Modals/CustomerEdit"
+import Sidebar from "../../components/SideBarLeft"
+import { PageContainer, PageText, PCard } from "../../components/UI/UI"
+import UserData from '../../userData.json'
 
-const Customer = () => {
+const ActiveCustomer = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => {
         setOpen(true)
@@ -25,7 +25,7 @@ const Customer = () => {
         field: "Status",
         renderCell: (StatusValue) => {
             return(
-                <Switch defaultChecked onD={()=>window.confirm("Want to Disable?")}/>            
+                <Switch defaultChecked onClick={()=>window.confirm("Want to Disable?")}/>            
                 )
         }         
         },
@@ -56,7 +56,7 @@ const Customer = () => {
                 <Sidebar />
                 <PageContainer style={{ height: "50em" }} maxWidth='100%' >
 
-                    <PageText variant="h4" component="span" name="Customer" width="5%" color="#30AADD" mt="35px" />
+                    <PageText variant="h4" component="span" name="Active Customer" width="auto" color="#30AADD" mt="35px" textAlign="left" />
 
 
                     <PCard elevation={4} width="95%" margin="10% 0px 0px 0px" height="60%"
@@ -70,7 +70,6 @@ const Customer = () => {
                             disableSelectionOnClick
                             checkboxSelection
                             density="standard"
-
                             sx={{ height: "100%", width: "100%", color: "#000000" }}
                         />}
                     >
@@ -84,4 +83,4 @@ const Customer = () => {
         </Box>
     )
 }
-export default Customer
+export default ActiveCustomer
