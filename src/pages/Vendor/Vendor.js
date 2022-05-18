@@ -1,14 +1,12 @@
 import { Add, Delete, ModeEdit } from "@mui/icons-material"
-import { Container, Stack, Box, IconButton, Switch, } from "@mui/material"
-import { DataGrid, GridToolbarFilterButton, } from "@mui/x-data-grid"
+import { Stack, Box, IconButton, Switch, Table, TableHead, TableRow, TableCell, TableBody, TableContainer, TablePagination, } from "@mui/material"
+import { DataGrid, GridToolbarFilterButton, GridTool } from "@mui/x-data-grid"
 import { useState } from "react"
+import DataTable from "../../components/DataTable"
 import { Header } from "../../components/Header"
 import AddVendor from "../../components/Modals/AddVendor"
 import EditVendor from "../../components/Modals/EditVendor"
 import Sidebar from "../../components/SideBarLeft"
-
-
-
 import { AddButton, PageContainer, PageText, PCard, } from "../../components/UI/UI"
 import UserData from '../../userData.json'
 
@@ -17,13 +15,16 @@ import UserData from '../../userData.json'
 const Vendor = () => {
     const [open, setOpen] = useState(false);
     const [edit, setEdit] = useState(false)
+    const [search, setSearch] = useState('')
+    const Cells = ["S.No.", "Propietery Name ", "Propietery Type ", "Email ", "Address ", "Mobile no. ", "Status"]
     const handleOpen = () => {
         setOpen(true)
     }
     const handleEdit = () => {
         setEdit(true)
     }
-    const Data = Object.values(UserData)
+    const Data = UserData
+    console.log(Data);
     const column = [{ field: "id", headerName: "S.NO.", width: 80 },
     { field: "Name", headerName: "Propietery Name ", width: 170 },
     { field: "type", headerName: "Propietery Type ", width: 170 },
@@ -45,12 +46,7 @@ const Vendor = () => {
         renderCell: (cellValues) => {
             return (
                 <>
-                    <IconButton color="primary" onClick={handleEdit}>
-                        <ModeEdit sx={{ border: "#30AADD 1px solid", }} />
-                    </IconButton>
-                    <IconButton >
-                        <Delete color="primary" sx={{ border: "#30AADD 1px solid" }} />
-                    </IconButton >
+
                 </>
             );
         }
@@ -60,30 +56,16 @@ const Vendor = () => {
     return (
         <Box >
             <Header />
-            <Stack direction="row" spacing={1} justifyContent="space-between" flexDirection="row" height='100%' >
+            <Stack direction="row" spacing={1} justifyContent="space-between" flexDirection="row" >
                 <Sidebar />
-                <PageContainer maxWidth='85%' >
-
+                <PageContainer maxWidth='85%' fixed>
                     <PageText variant="h4" component="span" name="Vendor" width="5%" color="#30AADD" mt="35px" />
                     {/* <Button variant="contained" size="small" name="Add New" startIcon={<Add />}  >Add New</Button> */}
                     <AddButton variant="contained" size="small" name="Add New" onClick={handleOpen} startIcon={<Add />} />
-                    <PCard elevation={4} width="95%" margin="10% 0px 0px 0px" height="60%"
+                    <PCard elevation={4} width="95%" margin="9% 0px 0px 0px"
                         content={
-                            <>    <DataGrid
-                                rows={row}
-                                columns={column}
-                                pageSize={10}
-                                pagination
-                                components={{ Toolbar: GridToolbarFilterButton }}
-                                rowsPerPageOptions={[5, 10, 25]}
-                                disableSelectionOnClick
-                                checkboxSelection
-                                density="standard"
+                            <DataTable />
 
-                                sx={{ height: "100%", width: "100%", color: "#000000" }}
-                            />
-
-                            </>
                         }
                     >
                     </PCard>

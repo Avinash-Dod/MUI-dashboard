@@ -1,6 +1,6 @@
 
 import { ModeEdit } from "@mui/icons-material"
-import { Avatar, Button, Card, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
+import { Avatar, Button, Card, Container, Dialog, Input, ListItem, ListItemButton, styled,  TextField, Typography } from "@mui/material"
 
 
 export const PageText = (props) => {
@@ -88,9 +88,8 @@ export const ListButton = styled(ListItemButton)`
     border-radius:8px;
     overflow:"hidden";
   },
-  '&.active'{      
-      background: #F7F5FF;
-    }  
+
+
   `;
 
 export const ListHeading = styled(Typography)`
@@ -110,7 +109,7 @@ position: relative;
 left: 15%;
 background:#fafafa;
 top: 72px;
-height:50em;
+height:100%;
 } 
 `;
 export const ProfilePic = styled(Avatar)`
