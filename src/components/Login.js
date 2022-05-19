@@ -13,10 +13,10 @@ const Login = () => {
                     content={
                         <Box justifyContent="center" textAlign="center" >
                             <Box >
-                                <Key sx={{ fontSize: "65px", margin: "auto" }} />
+                                <Key sx={{ fontSize: "100px", margin: "auto" }} />
                                 <PageText name="ADMIN PANEL" width="100%"
                                     color="#fff" variant="h4"
-                                    component="div" textAlign="center" mt="5%" />
+                                    component="div" textAlign="center"  />
                             </Box>
 
                             <Grid item xs={8} justifyContent="center" marginTop="15%" padding={1}>

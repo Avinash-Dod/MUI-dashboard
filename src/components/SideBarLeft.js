@@ -13,7 +13,7 @@ const Sidebar = () => {
 
       <List sx={{ mt: 3 }}>
         <NavLink to="/dashboard" style={{ textDecoration: "none" }}>
-          <SideList Text="Dashboard"  className="&.Mui-active"   Icon={<Dashboard />} />
+          <SideList Text="Dashboard" Icon={<Dashboard />} />
         </NavLink>
         <NavLink to="/vendor" className="active" style={{ color: "#25476a", textDecoration: "none" }}>
           <SideList Text="Vendor" Icon={<Store />} />
@@ -21,13 +21,7 @@ const Sidebar = () => {
         <NavLink to="/customer" style={{ color: "#25476a", textDecoration: "none" }}>
           <SideList Text="Customer" Icon={<Person />} />
         </NavLink>
-
-
-
-
-
       </List>
-
 
     </Container>
 

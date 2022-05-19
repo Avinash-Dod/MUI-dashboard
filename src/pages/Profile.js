@@ -15,7 +15,7 @@ const Profile = () => {
                 <PageContainer maxWidth='100%' >
 
                     <PageText variant="h4" component="span" name="Profile" width="5%" color="#30AADD" mt="35px" />
-                    <PCard elevation={4} width="50%" textAlign="center" margin="10% auto" padding="50px" height="auto"
+                    <PCard elevation={4} width="50%" textAlign="center" margin="9% auto" padding="50px" height="24em"
 
                         content={
                             <Box>
@@ -40,8 +40,6 @@ const Profile = () => {
                                             </>
 
                                         }
-
-
                                     >
                                         <ProfilePic src={<PersonPinCircle />} />
                                     </Badge>
