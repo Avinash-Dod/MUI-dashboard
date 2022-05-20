@@ -4,7 +4,7 @@ import { DataGrid } from "@mui/x-data-grid"
 import { useState } from "react"
 import { Header } from "../../components/Header"
 import EditCustomer from "../../components/Modals/CustomerEdit"
-import Sidebar from "../../components/SideBarLeft"
+import Sidebar from "../../components/Sidebars/AdminSidebar"
 import { PageContainer, PageText, PCard } from "../../components/UI/UI"
 import { CustomPagination, dataGridCellsx, datagridSx, filter } from "../../components/utility/utility"
 import UserData from '../../userData.json'
@@ -24,14 +24,7 @@ const Customer = () => {
     { field: "email", headerName: "Email ", width: 180 },
     { field: "location", headerName: "Address ", width: 180 },
     { field: "phone", headerName: "Mobile no. ", width: 150 },
-    {
-        field: "Status",
-        renderCell: (StatusValue) => {
-            return (
-                <Switch defaultChecked onClick={() => window.confirm("Want to Disable?")} />
-            )
-        }
-    },
+   
     {
         field: "Action",
         renderCell: (cellValues) => {
@@ -45,6 +38,14 @@ const Customer = () => {
                     </IconButton >
                 </>
             );
+        }
+    },
+    {
+        field: "Status",
+        renderCell: (StatusValue) => {
+            return (
+                <Switch defaultChecked onClick={() => window.confirm("Want to Disable?")} />
+            )
         }
     },
     ]

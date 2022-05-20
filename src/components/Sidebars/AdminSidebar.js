@@ -2,7 +2,8 @@
 import { Person, Dashboard, Store } from "@mui/icons-material"
 import { List, Container } from "@mui/material"
 import { NavLink } from "react-router-dom"
-import { SideList } from "./UI/UI"
+import { SideList } from "../UI/UI"
+
 
 
 const Sidebar = () => {

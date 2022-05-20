@@ -4,7 +4,7 @@ import { DataGrid, GridToolbarFilterButton } from "@mui/x-data-grid"
 import { useState } from "react"
 import { Header } from "../../components/Header"
 import EditCustomer from "../../components/Modals/CustomerEdit"
-import Sidebar from "../../components/SideBarLeft"
+import Sidebar from "../../components/Sidebars/AdminSidebar"
 import { PageContainer, PageText, PCard } from "../../components/UI/UI"
 import UserData from '../../userData.json'
 
@@ -29,7 +29,6 @@ const ActiveVendor = () => {
             )
         }
     },
-
     {
         field: "Action",
         renderCell: (cellValues) => {
@@ -47,7 +46,6 @@ const ActiveVendor = () => {
     },
     ]
     const row = Data
-
 
     return (
         <Box >

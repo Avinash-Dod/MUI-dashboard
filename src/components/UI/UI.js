@@ -1,6 +1,6 @@
 
-import { ModeEdit } from "@mui/icons-material"
-import { Avatar, Button, Card, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
+import { ModeEdit, Person } from "@mui/icons-material"
+import { Avatar, Button, Card, CardContent, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
 
 
 export const PageText = (props) => {
@@ -22,19 +22,13 @@ export const PageText = (props) => {
     )
 }
 
-const sxProp = {
-    '& .Mui-ListButton': {
-        backgroundColor: "#666666",
-        color: "#25476a"
-    }
 
-}
 export const SideList = (props) => {
     const { Text } = props
     return (
         <ListItem disablePadding>
-            <ListButton sx={sxProp} >
-                <ListHeading variant="body1" component="span"   >
+            <ListButton  >
+                <ListHeading variant="p" component="span"   >
                     {Text}
                 </ListHeading>
             </ListButton>
@@ -179,4 +173,35 @@ background-color: transparent;
 vertical-align: middle;
 border-style: none;
 width: 150px;
+`
+export const VendorCard = styled(Card)`
+padding: 24px;
+background: #30aadd21;
+border-radius: 25px;
+margin-bottom: 30px;
+text-align: center;
+display:block;
+
+`
+export const VendorCardContent = styled(CardContent)`
+line-height: 30px;
+margin: 5px 0 5px;
+display: block;
+`
+export const VendorCardHead = styled(Typography)`
+font-weight: 400;
+font-size: 20px;
+color: #000;
+`
+export const VendorIcon = styled(CardContent)`
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    text-align: center;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
 `

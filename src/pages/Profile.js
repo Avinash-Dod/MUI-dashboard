@@ -2,7 +2,8 @@ import { PersonPinCircle } from "@mui/icons-material"
 import { Badge, Box, Button, Grid, IconButton, InputLabel, Stack, } from "@mui/material"
 
 import { Header } from "../components/Header"
-import Sidebar from "../components/SideBarLeft"
+import Sidebar from "../components/Sidebars/AdminSidebar"
+
 import { InputField, PageContainer, PageText, PCard, Pencil, ProfilePic, SubmitButton, } from "../components/UI/UI"
 
 const Profile = () => {

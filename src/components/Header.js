@@ -2,7 +2,7 @@ import { AppBar, Avatar, Box, Container, Toolbar, Typography } from "@mui/materi
 import LogoImage from '../assets/logo.png'
 import { Logo } from "./UI/UI"
 
-import UserProfile from "./UI/userProfile"
+import UserProfile from "./UI/adminProfile"
 
 
 

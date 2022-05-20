@@ -5,7 +5,8 @@ import { useState } from "react"
 import { Header } from "../../components/Header"
 import AddVendor from "../../components/Modals/AddVendor"
 import EditVendor from "../../components/Modals/EditVendor"
-import Sidebar from "../../components/SideBarLeft"
+import Sidebar from "../../components/Sidebars/AdminSidebar"
+
 import { AddButton, PageContainer, PageText, PCard, } from "../../components/UI/UI"
 import { CustomPagination, dataGridCellsx, datagridSx, filter } from "../../components/utility/utility"
 import UserData from '../../userData.json'
@@ -28,14 +29,7 @@ const Vendor = () => {
     { field: "email", headerName: "Email ", width: 180 },
     { field: "location", headerName: "Address ", width: 180 },
     { field: "phone", headerName: "Mobile no. ", width: 150 },
-    {
-        field: "Status",
-        renderCell: (StatusValue) => {
-            return (
-                <Switch defaultChecked onClick={() => window.confirm("Want to Disable?")} />
-            )
-        }
-    },
+
     {
         field: "Action",
         renderCell: (cellValues) => {
@@ -51,6 +45,14 @@ const Vendor = () => {
             );
         }
     },
+    {
+        field: "Status",
+        renderCell: (StatusValue) => {
+            return (
+                <Switch defaultChecked onClick={() => window.confirm("Want to Disable?")} />
+            )
+        }
+    },
     ]
 
     const row = Data
@@ -61,9 +63,7 @@ const Vendor = () => {
                 <Sidebar />
                 <PageContainer maxWidth='85%' fixed>
                     <PageText variant="h4" component="span" name="Vendor" width="5%" color="#30AADD" mt="35px" />
-                    
                     <AddButton variant="contained" size="small" name="Add New" onClick={handleOpen} startIcon={<Add />} />
-
                     <PCard elevation={3} width="95%" margin="9% 0px 0px 0px" height="60%"
                         content={
 

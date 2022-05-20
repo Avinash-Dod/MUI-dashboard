@@ -2,7 +2,8 @@ import { ArrowDropUp, ArrowRightAlt } from "@mui/icons-material"
 import { Box,  Card, CardContent,  Grid, Stack,Typography } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import { Header } from "../components/Header"
-import Sidebar from "../components/SideBarLeft"
+import Sidebar from "../components/Sidebars/AdminSidebar"
+
 import { CardButton, PageContainer, PageText } from "../components/UI/UI"
 
 const Dashboard = () => {
