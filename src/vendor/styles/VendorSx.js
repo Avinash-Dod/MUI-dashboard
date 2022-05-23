@@ -14,13 +14,10 @@ export const V_ImageContainerSx = {
 export const MainContainerSx = {
     width: "50%",
     height: "100vh",
-    marginLeft:"50%",
-    
+    marginLeft:"50%",    
     display: "flex",
-    position:"relative",
-    
-    alignItems: "center",
-    
+    position:"relative",    
+    alignItems: "center",    
     background: "#fff",
 }
 
@@ -28,14 +25,32 @@ export const MsqaureSx={
     height:"190px",
     width:"190px",   
     
+    color:"#30AADD"
+
+    
+}
+export const TextLinkSx={
+    fontSize: "16px",
+    lineHeight: "24px",    
+    textAlign:"center",
+    fontWeight: "bold",
+    marginTop:"4%",
+    width:"100%",
+    
+    display:"flex"  
 }
 export const PrimaryButton={
-    text-align: center;
-    width: 100%;
-    padding: 16px 15px;
-    margin: 20px 0 0;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
+    textAlign: "center",
+    width: "100%",
+    color:"#fff",
+    padding: "16px 15px",
+    margin: "20px 0 0",
+    fontWWeight: "bold",
+    fontSize: "16px",
+    lineHeight: "24px",
     
+}
+
+export const InputFieldSx={
+    width:"10%"
 }
