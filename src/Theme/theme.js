@@ -9,8 +9,8 @@ export const theme = createTheme({
         secondary: {
             main: "#212529"
         },
-        other:{
-            main:"#ffffff"
+        other: {
+            main: "#ffffff"
         }
 
     },
@@ -77,7 +77,7 @@ export const theme = createTheme({
                 }
             }
         },
-        
+
         MuiDialog: {
             styleOverrides: {
                 paper: {

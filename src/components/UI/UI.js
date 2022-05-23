@@ -1,11 +1,11 @@
 
-import { ModeEdit, Person } from "@mui/icons-material"
+import { ModeEdit } from "@mui/icons-material"
 import { Avatar, Button, Card, CardContent, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
 
 
 export const PageText = (props) => {
 
-    const { variant, component, name, color, display, width, padding, mt, textAlign } = props
+    const { variant, component, name, color, display, width, padding, mt, mb, textAlign } = props
     return (
         <Typography variant={variant} component={component} name={name} color={color}
             sx={{
@@ -15,7 +15,8 @@ export const PageText = (props) => {
                 display: { display },
                 paddingBottom: { padding },
                 marginTop: mt,
-                textAlign: textAlign
+                textAlign: textAlign,
+                marginBottom: mb
             }} >
             {name}
         </Typography>
@@ -27,8 +28,8 @@ export const SideList = (props) => {
     const { Text } = props
     return (
         <ListItem disablePadding>
-            <ListButton  >
-                <ListHeading variant="p" component="span"   >
+            <ListButton >
+                <ListHeading variant="body1" component="span"   >
                     {Text}
                 </ListHeading>
             </ListButton>
@@ -84,15 +85,15 @@ export const ListButton = styled(ListItemButton)`
     background: #F7F5FF;
     color:#30AADD;
     border-radius:8px;
-    overflow:"hidden";
+    
   }, `;
 
 export const ListHeading = styled(Typography)`
 display: block;
-padding:8px 14px 8px 16px;
+padding:8px 8px 8px 14px;
 text-align:left;
+font-weight:"bold";
 font-size: 16px;
-font-weight: bold;
 line-height: 20px;  
 `;
 
@@ -178,19 +179,17 @@ export const VendorCard = styled(Card)`
 padding: 24px;
 background: #30aadd21;
 border-radius: 25px;
-margin-bottom: 30px;
 text-align: center;
 display:block;
-
 `
 export const VendorCardContent = styled(CardContent)`
 line-height: 30px;
-margin: 5px 0 5px;
+margin: 10px 0 10px;
 display: block;
 `
 export const VendorCardHead = styled(Typography)`
-font-weight: 400;
-font-size: 20px;
+
+font-size: 18px;
 color: #000;
 `
 export const VendorIcon = styled(CardContent)`
@@ -199,7 +198,7 @@ export const VendorIcon = styled(CardContent)`
     background: #fff;
     text-align: center;
     border-radius: 50%;
-    padding: 2px;
+    padding: 1%;
     display: flex;
     align-items: center;
     justify-content: center;

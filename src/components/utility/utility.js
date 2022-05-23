@@ -1,4 +1,4 @@
-import { Box, Pagination, } from "@mui/material"
+import { Pagination, } from "@mui/material"
 import { gridPageCountSelector, gridPageSelector, useGridApiContext, useGridSelector } from "@mui/x-data-grid"
 import { SearchField } from "../UI/UI";
 
@@ -29,6 +29,7 @@ export const filter = () => {
         />
     )
 }
+
 export const CustomPagination = () => {
     const apiRef = useGridApiContext();
     const page = useGridSelector(apiRef, gridPageSelector);

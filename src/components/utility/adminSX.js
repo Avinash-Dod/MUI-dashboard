@@ -1,14 +1,20 @@
 export const SidebarSX = {
     position: "fixed",
+    background: "#30AADD",
+    width: "16%",
+    overflowY: "auto",
     height: "100%",
-    mt: "64px",
-    bgcolor: "#30AADD",
-    color: "#25476a",
-    textAlign: "center",
-    maxHeight: '100%',
-    width: "15%",
-    zIndex: 1200
+    padding: "25px 15px 100px",
+    overflowX: "hidden",
+
 }
+
 export const Navlinksx = {
-    textDecoration:"none",   
+    textDecoration: "none",
+}
+export const AccordianSx = {
+    background: "#30AADD",
+    color: "#ffffff",
+    
+
 }
