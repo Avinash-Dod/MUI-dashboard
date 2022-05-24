@@ -55,7 +55,6 @@ const VendorProfile = () => {
                                         <Grid item xs={12}>
                                             <InputLabel>Featured Image</InputLabel>
                                             <InputField variant="outlined"
-
                                                 InputProps={{
                                                     startAdornment: (
                                                         <InputAdornment position="start">

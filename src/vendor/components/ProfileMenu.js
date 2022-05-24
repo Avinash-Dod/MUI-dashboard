@@ -59,9 +59,9 @@ const ProfileMenu = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                {Setting.map((Item, index) => (
+                {Setting.map((Item) => (
                     <NavLink to={Item.href} style={{ textDecoration: "none", color: "#212529" }}>
-                    <MenuItem onClick={handleCloseUserMenu} key={index}>
+                    <MenuItem onClick={handleCloseUserMenu} key={Item.Name}>
                         <Typography textAlign="center" >{Item.Name}</Typography>
 
                     </MenuItem>

@@ -204,3 +204,24 @@ export const VendorIcon = styled(CardContent)`
     justify-content: center;
     margin:auto;
 `
+
+export const OtpField =styled(Input)`
+
+font-weight: normal;
+    outline: none;
+    font-size: 16px;
+    line-height: 32px;
+    color: #081131;
+
+    background: #EBECEF;
+    border: 1px solid #EBECEF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 14px 16px;
+    transition: 0.2s ease-out;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+
+
+`

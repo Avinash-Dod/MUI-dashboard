@@ -1,12 +1,11 @@
 import { Box, Button, Stack, Typography } from "@mui/material"
 import { InputField, PageText, } from "../../../components/UI/UI"
 import { PrimaryButton } from "../../styles/VendorSx"
-
 import { MainBox, MainContainer, LoginContainer } from "../../styles/styledComponents"
 import { NavLink } from "react-router-dom"
 import { Navlinksx } from "../../../components/utility/adminSX"
 
-const VendorLogin = () => {
+const SignUp = () => {
     return (
         <Box>
             <Stack direction="row" flexDirection="row" justifyContent="start" >
@@ -17,23 +16,23 @@ const VendorLogin = () => {
                 }} fixed>
                     <MainBox padding={10} textAlign="center"
                     >
-
-                        <PageText name="Login" variant="h3" component="div" mb="7%" textAlign="left" width="100%" />
+                        <PageText name="Setup Your Account" variant="h4" component="div" mb="7%" textAlign="left" width="100%" />
                         <PageText name="Enter your Mobile Number" variant="p" component="div" width="50%"
                             textAlign="left" mb="4%" />
                         <InputField sx={{ width: "100%" }} />
-                        <NavLink to="/vendor/otp" style={Navlinksx} >
+                        <NavLink to="/vendor/setupotp" style={Navlinksx} >
                             <Button variant="contained" size="medium" sx={PrimaryButton} >Next </Button>
                         </NavLink>
                         <Box display="grid" gridTemplateColumns="repeat(1, 2fr)" gap={2}>
                             <Box gridColumn="span 12" >
                                 <Typography variant="body1" component="div"   >
-                                    Don't have an account?
-                                    <Button variant="text" sx={{ width: "5%", }}>SignUp</Button>
+                                    Already have an account?
+                                    <NavLink to="/vendor/vLogin" style={Navlinksx} >
+                                    <Button variant="text" sx={{ width: "5%", }}>Log In</Button>
+                                    </NavLink>
                                 </Typography>
 
                             </Box>
-
                         </Box>
 
                     </MainBox>
@@ -43,4 +42,4 @@ const VendorLogin = () => {
 
     )
 }
-export default VendorLogin
+export default SignUp

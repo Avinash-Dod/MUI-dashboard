@@ -1,6 +1,6 @@
 import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material"
 import { Logo } from "../../components/UI/UI"
-import LogoImage from '../assets/logo.png'
+import LogoImage from '../../assets/logo.png'
 import ProfileMenu from "./ProfileMenu"
 
 export const VendorHeader = () => {

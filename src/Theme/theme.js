@@ -23,6 +23,13 @@ export const theme = createTheme({
                     padding: "5px 25px",
                     position: "relative",
                     borderRadius: "50px",
+                    "&.Mui-disabled": {
+                        backgroundColor:"#30AADD",
+                        color:"#fff",
+                        opacity:0.7
+                        
+                        
+                    }
                 }
             }
         },
