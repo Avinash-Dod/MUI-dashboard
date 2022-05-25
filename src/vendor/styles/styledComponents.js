@@ -3,7 +3,7 @@ import MsquareLogo from '../assets/logo.png'
 import MsLogo from '../assets/logo-white.PNG'
 import { ArrowBack } from "@mui/icons-material"
 import { InputField, PageText, VendorIcon } from "../../components/UI/UI"
-import { Avatar, Box, Button, CardContent, Container, Divider, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
+import { Avatar, Box, Button, Container, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
 
 export const LoginContainer = () => {
     return (
