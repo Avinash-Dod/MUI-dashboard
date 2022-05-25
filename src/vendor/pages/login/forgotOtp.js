@@ -16,7 +16,7 @@ const ForgotOtp = () => {
 
                 <MainBox padding={10} textAlign="center"
                      >
-                    <NavLink to="/vendor/otp" >
+                    <NavLink to="/vendor/forgot" >
                         <BackButton />
                         </NavLink>
 
@@ -56,15 +56,11 @@ const ForgotOtp = () => {
 
 
                         
-                        <Box display="grid" gridTemplateColumns="repeat(1, 2fr)" gap={2}>
-                            <Box gridColumn="span 12" >
-                                <Typography variant="body1" component="div"   >
-                                    Didn't Get OTP?
-                                    <Button variant="text" sx={{ width: "5%", }}>Retry Now</Button>
+                        <Typography variant="p" component="p" sx={{padding:"5%"}}   >
+                                   Didn't get Otp ? <b style={{color:"#30AADD"}}>Retry Now</b>
+                                   
                                 </Typography>
-
-                            </Box>
-                        </Box>
+                                
 
                     </MainBox>
                 </MainContainer>

@@ -17,7 +17,7 @@ const SignUpDetails = () => {
                 }} >
 
                     <MainBox  justifyContent="center" display="block" mb="14%"  >
-                        <NavLink to="/vendor/otp" >
+                        <NavLink to="/vendor/setupotp" >
                             <BackButton />
                         </NavLink>
 

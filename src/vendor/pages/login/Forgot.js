@@ -17,7 +17,7 @@ const ForgotLoginPin = () => {
                 <MainBox padding={10} textAlign="center"
                     >
                          
-                        <NavLink to="/vendor/otp" >
+                        <NavLink to="/vendor/loginpin" >
                         <BackButton />
                         </NavLink>
 
@@ -27,9 +27,7 @@ const ForgotLoginPin = () => {
                         <InputField sx={{ width: "100%" }} />
                         <NavLink to="/vendor/forgotOtp" sx={Navlinksx} >
                         <Button variant="contained" size="medium" sx={PrimaryButton} >Next </Button>
-                        </NavLink>
-
-                       
+                        </NavLink>                       
 
                     </MainBox>
                 </MainContainer>

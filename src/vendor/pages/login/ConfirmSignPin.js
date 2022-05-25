@@ -42,7 +42,7 @@ const ConfirmSignPin = () => {
                                     </Grid>
 
                                 </Grid>
-                                <NavLink to="/vendor/dashboard" style={Navlinksx} >
+                                <NavLink to="/vendor/processing" style={Navlinksx} >
 
                                     <Button variant="contained" type="submit" size="medium" sx={PrimaryButton} > Next </Button>
 

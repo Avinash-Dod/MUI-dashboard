@@ -20,7 +20,6 @@ const VendorProfile = () => {
                                 <Box sx={{ marginBottom: 5 }}>
                                     <Badge
                                         overlap="circular"
-
                                         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                                         badgeContent={
                                             <>
@@ -70,9 +69,7 @@ const VendorProfile = () => {
                                                                 type="file"
                                                                 hidden
                                                             />
-
-                                                            <Button variant="outlined"
-                                                                size="small" >
+                                                            <Button variant="outlined" sx={{ marginTop: "0%" }} size="small" >
                                                                 <label htmlFor="featured-Image">
                                                                     Choose File
                                                                 </label>
@@ -81,7 +78,6 @@ const VendorProfile = () => {
                                                         </InputAdornment>
                                                     )
                                                 }}
-
                                                 size="medium" disabled placeholder="You can drag or drop Png" />
                                         </Grid>
                                         <Grid item xs={6}>
@@ -112,14 +108,12 @@ const VendorProfile = () => {
                                                     ),
                                                     endAdornment: (
                                                         <InputAdornment position="end" >
-
                                                             <input
                                                                 accept="image/*"
                                                                 id="icon-aadhar-card"
                                                                 type="file"
                                                                 hidden
                                                             />
-
                                                             <Button variant="outlined" htmlFor="icon-aadhar-card"
                                                                 size="medium" >
                                                                 <label >

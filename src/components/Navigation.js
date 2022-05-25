@@ -9,7 +9,7 @@ import VendorProfile from "../vendor/pages/VendorProfile"
 import VendorDashboard from "../vendor/pages/VendorDashboard"
 import VendorLogin from "../vendor/pages/login/VendorLogin"
 import Login from "../admin/pages/Login"
-import OtpLogin from "../vendor/pages/login/OtpLogin"
+import OtpLogin from "../vendor/pages/login/LoginPin"
 import ForgotLoginPin from "../vendor/pages/login/Forgot"
 import ForgotOtp from "../vendor/pages/login/forgotOtp"
 import SetupLoginPin from "../vendor/pages/login/SetupLoginPin"
@@ -20,6 +20,8 @@ import SignUpDetails from "../vendor/pages/login/SignUpDetails"
 import SetupOtp from "../vendor/pages/login/SetupOtp"
 import SignLoginPin from "../vendor/pages/login/SignLoginPin"
 import ConfirmSignPin from "../vendor/pages/login/ConfirmSignPin"
+import Processing from "../vendor/pages/login/processing"
+import LoginPin from "../vendor/pages/login/LoginPin"
 
 const Navigation = () => {
     return (
@@ -39,7 +41,7 @@ const Navigation = () => {
             <Route path="/vendor/profile" element={<VendorProfile />} />
             {/* Vendor Login routes */}
             <Route path="/vendor/vLogin" element={<VendorLogin />} />
-            <Route path="/vendor/otp" element={<OtpLogin />} />
+            <Route path="/vendor/loginpin" element={<LoginPin />} />
             <Route path="/vendor/forgot" element={<ForgotLoginPin />} />
             <Route path="/vendor/forgotOtp" element={<ForgotOtp />} />
             <Route path="/vendor/setuploginpin" element={<SetupLoginPin />} />
@@ -51,6 +53,7 @@ const Navigation = () => {
             <Route path="/vendor/signupdetails" element={<SignUpDetails />} />
             <Route path="/vendor/signloginpin" element={<SignLoginPin />} />
             <Route path="/vendor/confirmsignpin" element={<ConfirmSignPin />} />
+            <Route path="/vendor/processing" element={<Processing />} />
 
 
 

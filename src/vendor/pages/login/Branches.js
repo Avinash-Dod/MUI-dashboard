@@ -66,7 +66,6 @@ const Branches = () => {
                                                     <Text name={branch.address} variant="subtitle2"
                                                         component="div" fontWeight="normal" width="100%" fontSize="12px"  />
 
-
                                                 </ListItemText>
                                                 <ListItemText >
                                                     <ArrowForwardIos />

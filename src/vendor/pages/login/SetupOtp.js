@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { PageText } from "../../../components/UI/UI"
 import { Navlinksx } from "../../../components/utility/adminSX"
 
-import { BackButton, LoginContainer, MainBox, MainContainer, } from "../../styles/styledComponents"
+import { BackButton, LoginContainer, LogoImage, MainBox, MainContainer, } from "../../styles/styledComponents"
 import { InputFieldSx, PrimaryButton } from "../../styles/VendorSx"
 
 const SetupOtp = () => {
@@ -16,8 +16,10 @@ const SetupOtp = () => {
                     marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
                 }} >
 
-                    <MainBox padding={10} textAlign="center"  >
-                        <NavLink to="/vendor/otp" >
+                    <MainBox padding={1} textAlign="center"   >
+                        <LogoImage />
+
+                        <NavLink to="/vendor/signup" >
                             <BackButton />
                         </NavLink>
 
@@ -55,15 +57,10 @@ const SetupOtp = () => {
                             </form>
 
                         </Stack>
-                        <Box display="grid" gridTemplateColumns="repeat(1, 2fr)" gap={2}>
-                            <Box gridColumn="span 12" >
-                                <Typography variant="body1" component="div"   >
-                                    Didn't Get OTP?
-                                    <Button variant="text" sx={{ width: "5%", }}>Retry Now</Button>
-                                </Typography>
+                        <Typography variant="p" component="p" sx={{ padding: "5%" }}   >
+                            Didn't get Otp ? <b style={{ color: "#30AADD" }}>Retry Now</b>
 
-                            </Box>
-                        </Box>
+                        </Typography>
 
                     </MainBox>
                 </MainContainer>

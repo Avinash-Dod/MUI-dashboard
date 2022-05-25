@@ -1,0 +1,7 @@
+data flow
+
+login -> Login pin -> Branches -> Dashboard
+
+forgot -> forgot login pin -> otp ->setup pin-> confirm pin-> login
+
+signup -> signup->setup otp -> account details->setup pin->confirm pin ->processing

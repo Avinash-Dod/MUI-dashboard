@@ -2,20 +2,21 @@ import { Box, Button, Grid, Stack } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import { PageText } from "../../../components/UI/UI"
 import { Navlinksx } from "../../../components/utility/adminSX"
-
-import { LoginContainer, MainBox, MainContainer } from "../../styles/styledComponents"
+import { LoginContainer, LogoImage, MainBox, MainContainer } from "../../styles/styledComponents"
 import { InputFieldSx, PrimaryButton } from "../../styles/VendorSx"
 
-const OtpLogin = () => {
+const LoginPin = () => {
     return (
         <Box >
             <Stack direction="row" flexDirection="row" justifyContent="start" >
                 <LoginContainer />
-                <MainContainer  sx={{width:{ xs:'100%', md:'100%',lg:'50%',xl:'50%' },
-                     marginLeft:{xs:'none', md:'none',lg:'50%',xl:'50%'}}} >
+                <MainContainer sx={{
+                    width: { xs: '100%', md: '100%', lg: '50%', xl: '50%' },
+                    marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
+                }} >
 
-                <MainBox padding={10} textAlign="center"
-                     >
+                    <MainBox padding={1} textAlign="center" >
+                        <LogoImage />
 
                         <PageText name="Login" variant="h3" component="span" mb="7%" textAlign="left" width="100%" />
                         <PageText name="Enter your Login PIN" variant="p" component="div" width="100%"
@@ -54,4 +55,4 @@ const OtpLogin = () => {
 
     )
 }
-export default OtpLogin
+export default LoginPin

@@ -2,7 +2,7 @@ import { Box, Button, Grid, Stack } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import { PageText } from "../../../components/UI/UI"
 import { Navlinksx } from "../../../components/utility/adminSX"
-import { BackButton, LoginContainer, MainBox, MainContainer } from "../../styles/styledComponents"
+import { BackButton, LoginContainer, LogoImage, MainBox, MainContainer } from "../../styles/styledComponents"
 import { InputFieldSx, PrimaryButton } from "../../styles/VendorSx"
 
 const SetupLoginPin = () => {
@@ -10,12 +10,14 @@ const SetupLoginPin = () => {
         <Box >
             <Stack direction="row" flexDirection="row" justifyContent="start" >
                 <LoginContainer />
-                <MainContainer  sx={{width:{ xs:'100%', md:'100%',lg:'50%',xl:'50%' },
-                     marginLeft:{xs:'none', md:'none',lg:'50%',xl:'50%'}}} >
-
-                <MainBox padding={10} textAlign="center"
-                         >
-                        <NavLink to="/vendor/otp" >
+                <MainContainer sx={{
+                    width: { xs: '100%', md: '100%', lg: '50%', xl: '50%' },
+                    marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
+                }} >
+                    <MainBox padding={1} textAlign="center"
+                    >
+                        <LogoImage />
+                        <NavLink to="/vendor/forgotOtp" >
                             <BackButton />
                         </NavLink>
 
@@ -40,7 +42,7 @@ const SetupLoginPin = () => {
 
                                 </Grid>
                                 <NavLink to="/vendor/confirmloginpin" style={Navlinksx} >
-                                <Button variant="contained" type="submit" size="medium" sx={PrimaryButton} > Next </Button>
+                                    <Button variant="contained" type="submit" size="medium" sx={PrimaryButton} > Next </Button>
                                 </NavLink>
                             </form>
 
