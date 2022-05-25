@@ -13,7 +13,7 @@ const VendorProfile = () => {
             <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" height='100%' >
                 <VendorSidebar />
                 <PageContainer maxWidth='100%' >
-                    <PCard elevation={4} width="50%" textAlign="center" margin="2% auto" padding="40px" height="auto"
+                    <PCard elevation={4} width="60%" textAlign="center" margin="2% auto" padding="40px" height="auto"
                         content={
                             <Box>
                                 <PageText variant="h4" component="div" name="Profile" width="100%" color="#30AADD" mb="30px" />
@@ -110,13 +110,13 @@ const VendorProfile = () => {
                                                         <InputAdornment position="end" >
                                                             <input
                                                                 accept="image/*"
-                                                                id="icon-aadhar-card"
+                                                                id="icon-pan-card"
                                                                 type="file"
                                                                 hidden
                                                             />
-                                                            <Button variant="outlined" htmlFor="icon-aadhar-card"
+                                                            <Button variant="outlined" htmlFor="icon-aadhar-card" sx={{ marginTop: "0%" }}
                                                                 size="medium" >
-                                                                <label >
+                                                                <label htmlFor="icon-pan-card" >
                                                                     Choose File
                                                                 </label>
                                                             </Button>
@@ -125,7 +125,7 @@ const VendorProfile = () => {
                                                     )
                                                 }}
 
-                                                size="medium" placeholder="You can drag or drop Png" />
+                                                size="medium" placeholder="You can drag / drop Png" />
                                         </Grid>
                                         <Grid item xs={6}>
                                             <InputLabel>Aadhar Card</InputLabel>
@@ -138,17 +138,16 @@ const VendorProfile = () => {
                                                     ),
                                                     endAdornment: (
                                                         <InputAdornment position="end" >
-
                                                             <input
                                                                 accept="image/*"
-                                                                id="icon-pan-card"
+                                                                id="icon-aadhar-card"
                                                                 type="file"
                                                                 hidden
                                                             />
 
-                                                            <Button variant="outlined"
+                                                            <Button variant="outlined" sx={{ marginTop: "0%" }}
                                                                 size="medium" >
-                                                                <label htmlFor="icon-pan-card">
+                                                                <label htmlFor="icon-aadhar-card">
                                                                     Choose File
                                                                 </label>
                                                             </Button>
@@ -156,7 +155,7 @@ const VendorProfile = () => {
                                                         </InputAdornment>
                                                     )
                                                 }}
-                                                placeholder="You can drag or drop Png" />
+                                                placeholder="You can drag / drop Png" />
                                         </Grid>
                                         <Grid item xs={12}>
                                             <InputLabel>Address</InputLabel>

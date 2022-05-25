@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { PageText } from "../../../components/UI/UI"
 import { Navlinksx } from "../../../components/utility/adminSX"
 
-import { BackButton, MainBox, MainContainer,LoginContainer } from "../../styles/styledComponents"
+import { BackButton, MainBox, MainContainer,LoginContainer, LogoImage } from "../../styles/styledComponents"
 import { InputFieldSx, PrimaryButton } from "../../styles/VendorSx"
 
 const ConfirmLoginPin = () => {
@@ -14,9 +14,8 @@ const ConfirmLoginPin = () => {
                 <MainContainer sx={{width:{ xs:'100%', md:'100%',lg:'50%',xl:'50%' },
                      marginLeft:{xs:'none', md:'none',lg:'50%',xl:'50%'}}} >
 
-                <MainBox padding={10} textAlign="center"
-                     
-                      >
+                <MainBox padding={15} textAlign="center"              >
+                    <LogoImage />
                         <NavLink to="/vendor/setuploginpin" >
                             <BackButton />
                         </NavLink >
@@ -41,7 +40,7 @@ const ConfirmLoginPin = () => {
                                     </Grid>
 
                                 </Grid>
-                                <NavLink to="/vendor/dashboard" style={Navlinksx} >
+                                <NavLink to="/vendor/vLogin" style={Navlinksx} >
 
                                     <Button variant="contained" type="submit" size="medium" sx={PrimaryButton} > Next </Button>
 

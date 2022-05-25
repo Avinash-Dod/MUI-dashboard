@@ -2,7 +2,7 @@
 import { ModeEdit } from "@mui/icons-material"
 import { Avatar, Button, Card, CardContent, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
 
-
+//Reusable Components
 export const PageText = (props) => {
 
     const { variant, component, name, color, display, width, padding, mt, mb, textAlign } = props
@@ -23,16 +23,13 @@ export const PageText = (props) => {
     )
 }
 
-
 export const SideList = (props) => {
     const { Text } = props
     return (
-        <ListItem disablePadding>
-            <ListButton >
-                <ListHeading variant="body1" component="span"   >
-                    {Text}
-                </ListHeading>
-            </ListButton>
+        <ListItem >
+            <ListHeading variant="p" component="span"   >
+                {Text}
+            </ListHeading>
         </ListItem>
     )
 }
@@ -79,22 +76,33 @@ export const CardButton = (props) => {
         <Button size={size} startIcon={startIcon} endIcon={endIcon} variant="contained" sx={{ color: "#ffffff" }}>{name}</Button>
     )
 }
-// 
-export const ListButton = styled(ListItemButton)`
-&:hover {
-    background: #F7F5FF;
-    color:#30AADD;
-    border-radius:8px;
-    
-  }, `;
+// styled components
+export const ListItemSidebar = styled(ListItem)`
+
+  `;
 
 export const ListHeading = styled(Typography)`
 display: block;
-padding:8px 8px 8px 14px;
-text-align:left;
-font-weight:"bold";
+width:100%;
+padding: 10px 12px 12px 12px;
 font-size: 16px;
-line-height: 20px;  
+font-weight: 400;
+line-height: 20px;
+color: #fff;
+&:hover{
+    color:#30AADD;
+    background:#fafafa;
+    padding: 10px 12px 12px 12px;
+    width:100%;
+    border-radius:8px;
+}
+&:active{
+    color:#30AADD;
+    background:#fafafa;
+    padding: 8px 8px 8px 8px;
+    width:100%;
+    border-radius:8px;
+}
 `;
 
 export const PageContainer = styled(Container)`
@@ -188,7 +196,6 @@ margin: 10px 0 10px;
 display: block;
 `
 export const VendorCardHead = styled(Typography)`
-
 font-size: 18px;
 color: #000;
 `
@@ -204,24 +211,19 @@ export const VendorIcon = styled(CardContent)`
     justify-content: center;
     margin:auto;
 `
-
-export const OtpField =styled(Input)`
-
+export const OtpField = styled(Input)`
 font-weight: normal;
-    outline: none;
-    font-size: 16px;
-    line-height: 32px;
-    color: #081131;
-
-    background: #EBECEF;
-    border: 1px solid #EBECEF;
-    box-sizing: border-box;
-    border-radius: 8px;
-    padding: 14px 16px;
-    transition: 0.2s ease-out;
-    width: 100%;
-    height: 80px;
-    text-align: center;
-
-
+outline: none;
+font-size: 16px;
+line-height: 32px;
+color: #081131;
+background: #EBECEF;
+border: 1px solid #EBECEF;
+box-sizing: border-box;
+border-radius: 8px;
+padding: 14px 16px;
+transition: 0.2s ease-out;
+width: 100%;
+height: 80px;
+text-align: center;
 `

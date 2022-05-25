@@ -16,18 +16,15 @@ export const MsqaureSx = {
     height: "190px",
     width: "190px",
     color: "#30AADD"
-
-
 }
 
 export const MsqaureLogoSx = {
-    height: "90px",
-    width: "110px",
-    color: "#30AADD",
-    border:"solid 1px black",
-    borderRadius:"50%"
-
-
+    height: "110px",
+    width: "130px",
+    background: "#30AADD",
+    borderRadius: "50%",
+    marginBottom: "10%",
+    marginTop: "0%",
 }
 export const TextLinkSx = {
     fontSize: "16px",
@@ -53,18 +50,16 @@ export const PrimaryButton = {
 export const InputFieldSx = {
     fontWeight: "normal",
     outline: "none",
-    fontSize: "16px",
+    fontSize: "32px",
     lineHeight: "32px",
     color: "#081131",
     background: "#EBECEF",
     border: "1px solid #EBECEF",
     boxSizing: "border-box",
     borderRadius: "8px",
-    padding: "12px 14px",
+    padding: "14px 1px",
     transition: "0.2s ease-out",
     width: "100%",
     height: "80px",
     textAlign: "center",
-
-
 }

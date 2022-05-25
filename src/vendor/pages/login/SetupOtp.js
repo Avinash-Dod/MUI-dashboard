@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { PageText } from "../../../components/UI/UI"
 import { Navlinksx } from "../../../components/utility/adminSX"
 
-import { BackButton, LoginContainer, LogoImage, MainBox, MainContainer, } from "../../styles/styledComponents"
+import { BackButton, LoginContainer, LogoImage, MainBox, MainContainer, Text, } from "../../styles/styledComponents"
 import { InputFieldSx, PrimaryButton } from "../../styles/VendorSx"
 
 const SetupOtp = () => {
@@ -49,8 +49,9 @@ const SetupOtp = () => {
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>
 
-                                    <PageText name="An OTP has been sent to +91XXXXXXXXXX" variant="subtitle2" component="span" textAlign="center" mt="2%" />
+                                    
                                 </Grid>
+                                <Text name="An OTP has been sent to +91XXXXXXXXXX" variant="subtitle2" component="span" textAlign="center" mt="5%" />
                                 <NavLink to="/vendor/signupdetails" style={Navlinksx} >
                                     <Button variant="contained" type="submit" size="medium" sx={PrimaryButton} >Next</Button>
                                 </NavLink>

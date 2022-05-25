@@ -12,7 +12,7 @@ const VendorSidebar = () => {
 
         <Container sx={SidebarSX} >
 
-            <List sx={{ mt: 5 }}>
+            <List sx={{ mt: 5 ,mr:"15%"}}>
                 <NavLink to="/vendor/dashboard" style={Navlinksx}>
                     <SideList Text="Dashboard" />
                 </NavLink>

@@ -1,7 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material"
 import { InputField, PageText, } from "../../../components/UI/UI"
 import { PrimaryButton } from "../../styles/VendorSx"
-
 import { MainBox, MainContainer, LoginContainer, LogoImage } from "../../styles/styledComponents"
 import { NavLink } from "react-router-dom"
 import { Navlinksx } from "../../../components/utility/adminSX"
@@ -16,7 +15,7 @@ const VendorLogin = () => {
                 <MainContainer sx={{
                     width: { xs: '100%', md: '100%', lg: '50%', xl: '50%' },
                     marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
-                }} fixed>
+                }} >
 
                     <MainBox padding={1} textAlign="center"                    >
                         <LogoImage />

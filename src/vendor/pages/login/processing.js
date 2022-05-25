@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material"
 import { VendorIcon } from "../../../components/UI/UI"
-import { MsqaureSx } from "../../styles/VendorSx"
-import MsquareLogo from '../../assets/logo.png'
+import { MsqaureLogoSx, MsqaureSx } from "../../styles/VendorSx"
+import MsLogo from '../../assets/logo-white.PNG'
 import processing from '../../assets/precessing.png'
 import { Text } from "../../styles/styledComponents"
 
@@ -10,10 +10,10 @@ const Processing = () => {
         <Box >
             <Container sx={{ mt: "4%" }} >
 
-                <VendorIcon sx={MsqaureSx}>
-                    <img src={MsquareLogo} alt="Msquare" style={{ width: "100%" }} />
-                </VendorIcon>
-
+            <VendorIcon sx={MsqaureLogoSx}  >
+                <img src={MsLogo} alt="Msquare" style={{ width:"65%" }} />
+                
+            </VendorIcon>
                 <Text name="Hello! Welcome Back." variant="h3" component="p" color="#30AADD"
                     textAlign="center" fontWeight="bold" mb="4%"
                 />

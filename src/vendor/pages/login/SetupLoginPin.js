@@ -14,7 +14,7 @@ const SetupLoginPin = () => {
                     width: { xs: '100%', md: '100%', lg: '50%', xl: '50%' },
                     marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
                 }} >
-                    <MainBox padding={1} textAlign="center"
+                    <MainBox padding={15} textAlign="center"
                     >
                         <LogoImage />
                         <NavLink to="/vendor/forgotOtp" >

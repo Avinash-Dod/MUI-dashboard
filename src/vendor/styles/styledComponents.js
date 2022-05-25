@@ -1,15 +1,16 @@
-import { MsqaureSx } from "./VendorSx"
+import { MsqaureLogoSx, MsqaureSx } from "./VendorSx"
 import MsquareLogo from '../assets/logo.png'
+import MsLogo from '../assets/logo-white.PNG'
 import { ArrowBack } from "@mui/icons-material"
 import { InputField, PageText, VendorIcon } from "../../components/UI/UI"
-import { Avatar, Box, Button, Container, Divider, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
+import { Avatar, Box, Button, CardContent, Container, Divider, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
 
 export const LoginContainer = () => {
     return (
         <WelcomeContainer sx={{ display: { xs: 'none', md: 'none', lg: 'flex', xl: 'flex' } }} >
             <Box>
                 <VendorIcon sx={MsqaureSx}>
-                    <img src={MsquareLogo} alt="Msquare" style={{ height: "90px", width: "120px" }} />
+                    <img src={MsquareLogo} alt="Msquare" style={{margin:"auto", height: "90px", width: "120px" }} />
                 </VendorIcon>
 
                 <PageText name="Welcome to M Square" variant="h3" component="span" mt="8%" color="#ffffff" />
@@ -21,9 +22,8 @@ export const LoginContainer = () => {
 export const LogoImage = () => {
     return (
         <Box sx={{ display: { xs: 'block', md: 'block', lg: 'none', xl: 'none' } }}>
-            <VendorIcon sx={MsqaureSx}>
-                <img src={MsquareLogo} alt="Msquare" style={{ width: "80%" }} />
-                <Divider />
+            <VendorIcon sx={MsqaureLogoSx}  >
+                <img src={MsLogo} alt="Msquare" style={{ width:"65%" }} />                
             </VendorIcon>
 
         </Box>

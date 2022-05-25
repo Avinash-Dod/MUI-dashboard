@@ -9,7 +9,6 @@ import VendorProfile from "../vendor/pages/VendorProfile"
 import VendorDashboard from "../vendor/pages/VendorDashboard"
 import VendorLogin from "../vendor/pages/login/VendorLogin"
 import Login from "../admin/pages/Login"
-import OtpLogin from "../vendor/pages/login/LoginPin"
 import ForgotLoginPin from "../vendor/pages/login/Forgot"
 import ForgotOtp from "../vendor/pages/login/forgotOtp"
 import SetupLoginPin from "../vendor/pages/login/SetupLoginPin"
@@ -27,16 +26,15 @@ const Navigation = () => {
     return (
         <Routes >
             {/* Super admin Routes */}
-            <Route path="/" element={<Login />} />
+            <Route path="/admin/login" element={<Login />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/vendor" element={<Vendor />} />
             <Route path="/admin/activeVendor" element={<ActiveVendor />} />
             <Route path="/admin/customer" element={<Customer />} />
             <Route path="/admin/activeCustomer" element={<ActiveCustomer />} />
             <Route path="/admin/profile" element={<Profile />} />
-            
-            {/* Vendor Routes */}
 
+            {/* Vendor Routes */}
             <Route path="/vendor/dashboard" element={<VendorDashboard />} />
             <Route path="/vendor/profile" element={<VendorProfile />} />
             {/* Vendor Login routes */}
@@ -54,9 +52,6 @@ const Navigation = () => {
             <Route path="/vendor/signloginpin" element={<SignLoginPin />} />
             <Route path="/vendor/confirmsignpin" element={<ConfirmSignPin />} />
             <Route path="/vendor/processing" element={<Processing />} />
-
-
-
 
             {/* Customer Routes */}
         </Routes>

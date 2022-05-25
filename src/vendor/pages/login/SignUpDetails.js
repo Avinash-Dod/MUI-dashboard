@@ -2,7 +2,7 @@ import { Box, Button, Grid, Stack } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import { InputField, PageText } from "../../../components/UI/UI"
 import { Navlinksx } from "../../../components/utility/adminSX"
-import { AccountFields, BackButton, LoginContainer, MainBox, MainContainer, } from "../../styles/styledComponents"
+import { AccountFields, BackButton, LoginContainer, LogoImage, MainBox, MainContainer, } from "../../styles/styledComponents"
 import {  PrimaryButton } from "../../styles/VendorSx"
 
 const SignUpDetails = () => {
@@ -16,7 +16,10 @@ const SignUpDetails = () => {
                     display:"grid" ,mt:"4%",
                 }} >
 
-                    <MainBox  justifyContent="center" display="block" mb="14%"  >
+<MainBox padding={1} textAlign="center"   >
+                        <LogoImage />
+
+
                         <NavLink to="/vendor/setupotp" >
                             <BackButton />
                         </NavLink>

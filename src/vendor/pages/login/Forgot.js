@@ -2,7 +2,7 @@ import { Box, Button,  Stack  } from "@mui/material"
 import { InputField, PageText, } from "../../../components/UI/UI"
 import { PrimaryButton } from "../../styles/VendorSx"
 
-import { BackButton, LoginContainer, MainBox, MainContainer } from "../../styles/styledComponents"
+import { BackButton, LoginContainer, LogoImage, MainBox, MainContainer } from "../../styles/styledComponents"
 
 import { NavLink } from "react-router-dom"
 import { Navlinksx } from "../../../components/utility/adminSX"
@@ -14,8 +14,8 @@ const ForgotLoginPin = () => {
                 <LoginContainer />
                 <MainContainer   sx={{width:{ xs:'100%', md:'100%',lg:'50%',xl:'50%' },
                      marginLeft:{xs:'none', md:'none',lg:'50%',xl:'50%'}}} fixed>
-                <MainBox padding={10} textAlign="center"
-                    >
+                <MainBox padding={1} textAlign="center"                    >
+                    <LogoImage />
                          
                         <NavLink to="/vendor/loginpin" >
                         <BackButton />
@@ -25,7 +25,7 @@ const ForgotLoginPin = () => {
                         <PageText name="Enter your Mobile Number" variant="body1" component="div" width="50%"
                             textAlign="left" mb="4%" />
                         <InputField sx={{ width: "100%" }} />
-                        <NavLink to="/vendor/forgotOtp" sx={Navlinksx} >
+                        <NavLink to="/vendor/forgotOtp" style={Navlinksx} >
                         <Button variant="contained" size="medium" sx={PrimaryButton} >Next </Button>
                         </NavLink>                       
 

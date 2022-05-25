@@ -13,8 +13,8 @@ const SignUp = () => {
                 <MainContainer sx={{
                     width: { xs: '100%', md: '100%', lg: '50%', xl: '50%' },
                     marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
-                }} fixed>
-                    <MainBox padding={1} textAlign="center"                    >
+                }} >
+                    <MainBox padding={1} textAlign="center"  >
                         <LogoImage />
 
                         <PageText name="Setup Your Account" variant="h4" component="div" mb="7%" textAlign="left" width="100%" />
@@ -30,7 +30,6 @@ const SignUp = () => {
                                 <b style={{ color: "#30AADD" }}> Log In</b>
                             </NavLink>
                         </Typography>
-
 
                     </MainBox>
                 </MainContainer>
