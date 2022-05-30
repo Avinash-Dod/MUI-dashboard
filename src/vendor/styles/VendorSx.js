@@ -11,7 +11,6 @@ export const V_ImageContainerSx = {
 
 }
 
-
 export const MsqaureSx = {
     height: "190px",
     width: "190px",
@@ -23,7 +22,7 @@ export const MsqaureLogoSx = {
     width: "130px",
     background: "#30AADD",
     borderRadius: "50%",
-    marginBottom: "10%",
+    marginBottom: "7%",
     marginTop: "0%",
 }
 export const TextLinkSx = {

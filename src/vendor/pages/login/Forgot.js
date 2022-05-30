@@ -1,9 +1,7 @@
-import { Box, Button,  Stack  } from "@mui/material"
+import { Box, Button, Stack } from "@mui/material"
 import { InputField, PageText, } from "../../../components/UI/UI"
 import { PrimaryButton } from "../../styles/VendorSx"
-
 import { BackButton, LoginContainer, LogoImage, MainBox, MainContainer } from "../../styles/styledComponents"
-
 import { NavLink } from "react-router-dom"
 import { Navlinksx } from "../../../components/utility/adminSX"
 
@@ -12,13 +10,15 @@ const ForgotLoginPin = () => {
         <Box>
             <Stack flexDirection="row" justifyContent="start" >
                 <LoginContainer />
-                <MainContainer   sx={{width:{ xs:'100%', md:'100%',lg:'50%',xl:'50%' },
-                     marginLeft:{xs:'none', md:'none',lg:'50%',xl:'50%'}}} fixed>
-                <MainBox padding={1} textAlign="center"                    >
-                    <LogoImage />
-                         
+                <MainContainer sx={{
+                    width: { xs: '100%', md: '100%', lg: '50%', xl: '50%' },
+                    marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
+                }} fixed>
+                    <MainBox padding={1} textAlign="center"   >
+                        <LogoImage />
+
                         <NavLink to="/vendor/loginpin" >
-                        <BackButton />
+                            <BackButton />
                         </NavLink>
 
                         <PageText name="Forgot Login Pin" variant="h3" component="div" mb="7%" textAlign="left" width="100%" />
@@ -26,14 +26,14 @@ const ForgotLoginPin = () => {
                             textAlign="left" mb="4%" />
                         <InputField sx={{ width: "100%" }} />
                         <NavLink to="/vendor/forgotOtp" style={Navlinksx} >
-                        <Button variant="contained" size="medium" sx={PrimaryButton} >Next </Button>
-                        </NavLink>                       
+                            <Button variant="contained" size="medium" sx={PrimaryButton} >Next </Button>
+                        </NavLink>
 
                     </MainBox>
                 </MainContainer>
             </Stack>
         </Box>
-
     )
+    
 }
 export default ForgotLoginPin

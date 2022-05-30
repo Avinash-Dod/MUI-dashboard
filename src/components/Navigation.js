@@ -26,6 +26,7 @@ const Navigation = () => {
     return (
         <Routes >
             {/* Super admin Routes */}
+
             <Route path="/admin/login" element={<Login />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/vendor" element={<Vendor />} />
@@ -35,8 +36,10 @@ const Navigation = () => {
             <Route path="/admin/profile" element={<Profile />} />
 
             {/* Vendor Routes */}
+
             <Route path="/vendor/dashboard" element={<VendorDashboard />} />
             <Route path="/vendor/profile" element={<VendorProfile />} />
+
             {/* Vendor Login routes */}
             <Route path="/vendor/vLogin" element={<VendorLogin />} />
             <Route path="/vendor/loginpin" element={<LoginPin />} />
@@ -45,7 +48,9 @@ const Navigation = () => {
             <Route path="/vendor/setuploginpin" element={<SetupLoginPin />} />
             <Route path="/vendor/confirmloginpin" element={<ConfirmLoginPin />} />
             <Route path="/vendor/branches" element={<Branches />} />
+
             {/* Vendor SignUp routes */}
+
             <Route path="/vendor/signup" element={<SignUp />} />
             <Route path="/vendor/setupotp" element={<SetupOtp />} />
             <Route path="/vendor/signupdetails" element={<SignUpDetails />} />

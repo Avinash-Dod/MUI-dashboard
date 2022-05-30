@@ -28,15 +28,19 @@ const LoginPin = () => {
                                     <Grid item xs={1}>
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>
+                                    
                                     <Grid item xs={1}>
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>
+
                                     <Grid item xs={1}>
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>
+
                                     <Grid item xs={1}>
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>
+
                                 </Grid>
                             </form>
                         </Stack>

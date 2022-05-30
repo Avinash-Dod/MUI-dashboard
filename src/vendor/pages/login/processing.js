@@ -8,14 +8,14 @@ import { Text } from "../../styles/styledComponents"
 const Processing = () => {
     return (
         <Box >
-            <Container sx={{ mt: "4%" }} >
+            <Container sx={{ mt: "2%" }} >
 
-            <VendorIcon sx={MsqaureLogoSx}  >
-                <img src={MsLogo} alt="Msquare" style={{ width:"65%" }} />
-                
-            </VendorIcon>
+                <VendorIcon sx={MsqaureLogoSx}  >
+                    <img src={MsLogo} alt="Msquare" style={{ width: "65%" }} />
+
+                </VendorIcon>
                 <Text name="Hello! Welcome Back." variant="h3" component="p" color="#30AADD"
-                    textAlign="center" fontWeight="bold" mb="4%"
+                    textAlign="center" fontWeight="bold" mb="2%"
                 />
 
                 <Text name="Your Account has been Processing..." variant="p" component="p"
@@ -31,7 +31,7 @@ const Processing = () => {
                 </Typography>
 
                 <Text name="Thank you for being a part of us." variant="h6" component="p"
-                    textAlign="center" fontWeight="bold" color="#30AADD" mt="4%"
+                    textAlign="center" fontWeight="bold" color="#30AADD" mt="2%"
                 />
 
             </Container>

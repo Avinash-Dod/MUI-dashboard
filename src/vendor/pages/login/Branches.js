@@ -53,8 +53,8 @@ const Branches = () => {
                             <List >
                                 {location.map(branch => (
                                     <>
-                                        <BranchList color="#666" >
-                                            <ListItem sx={{ width: "100%" }}  >
+                                        <BranchList color="#666" key={Object.keys(branch.address)} >
+                                            <ListItem sx={{ width: "100%" }}   >
 
                                                 <ListItemAvatar sx={{ float: "left" }}>
                                                     <img src={branch.src} alt={branch.BranchName} />
