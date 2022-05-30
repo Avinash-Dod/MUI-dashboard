@@ -1,6 +1,6 @@
 
 import { ModeEdit } from "@mui/icons-material"
-import { Avatar, Button, Card, CardContent, Container, Dialog, Input, ListItem, ListItemButton, styled, TextField, Typography } from "@mui/material"
+import { Avatar, Button, Card, CardContent, Container, Dialog, Input, ListItem, MenuItem, styled, TextField, Typography } from "@mui/material"
 
 //Reusable Components
 export const PageText = (props) => {
@@ -71,20 +71,17 @@ export const LoginCard = (props) => {
 }
 
 export const CardButton = (props) => {
-    const { size, startIcon, endIcon, name, } = props
+    const { size, startIcon, endIcon, name, onClick } = props
     return (
-        <Button size={size} startIcon={startIcon} endIcon={endIcon} variant="contained" sx={{ color: "#ffffff" }}>{name}</Button>
+        <Button size={size} onClick={onClick} startIcon={startIcon} endIcon={endIcon} variant="contained" sx={{ color: "#ffffff" }}>{name} </Button>
     )
 }
 // styled components
-export const ListItemSidebar = styled(ListItem)`
-
-  `;
 
 export const ListHeading = styled(Typography)`
 display: block;
 width:100%;
-padding: 10px 12px 12px 12px;
+padding: 12px 14px 14px 12px;
 font-size: 16px;
 font-weight: 400;
 line-height: 20px;
@@ -92,14 +89,7 @@ color: #fff;
 &:hover{
     color:#30AADD;
     background:#fafafa;
-    padding: 10px 12px 12px 12px;
-    width:100%;
-    border-radius:8px;
-}
-&:active{
-    color:#30AADD;
-    background:#fafafa;
-    padding: 8px 8px 8px 8px;
+    padding: 12px 14px 14px 12px;
     width:100%;
     border-radius:8px;
 }
@@ -136,9 +126,9 @@ box-shadow:1px 1px 1px 1px #ededed;
 
 export const InputField = styled(TextField)`
 fieldset{ 
-    border-radius:50px;      
+    border-radius:25px;      
 };
-border-radius:50px;
+border-radius:25px;
 width:100%;
 margin-top:2%;
 margin-bottom:2%;
@@ -200,16 +190,16 @@ font-size: 18px;
 color: #000;
 `
 export const VendorIcon = styled(CardContent)`
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    text-align: center;
-    border-radius: 50%;
-    padding: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
+width: 80px;
+height: 80px;
+background: #fff;
+text-align: center;
+border-radius: 50%;
+padding: 1%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin:auto;
 `
 export const OtpField = styled(Input)`
 font-weight: normal;
@@ -226,4 +216,14 @@ transition: 0.2s ease-out;
 width: 100%;
 height: 80px;
 text-align: center;
+`
+
+export const SettingMenu = styled(MenuItem)`
+left: auto;
+color: #212529;
+text-align: left;
+background: #30AADD;
+&:hover{
+    color:#30AADD;
+}
 `

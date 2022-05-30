@@ -12,7 +12,7 @@ const VendorSidebar = () => {
 
         <Container sx={SidebarSX} >
 
-            <List sx={{ mt: 5 ,mr:"15%"}}>
+            <List sx={{ mt: 5, mr: "15%" }}>
                 <NavLink to="/vendor/dashboard" style={Navlinksx}>
                     <SideList Text="Dashboard" />
                 </NavLink>
@@ -29,9 +29,31 @@ const VendorSidebar = () => {
                     <SideList Text="User Mangement" />
                 </NavLink>
 
-                <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                    <SideList Text="Offer Mangement" />
-                </NavLink>
+                <Accordion sx={AccordianSx} disableGutters elevation={0}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMore color="other" />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography>Offer Management</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+
+                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
+                            <SideList Text="General" />
+                        </NavLink>
+
+                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
+                            <SideList Text="Prepaid Cards" />
+                        </NavLink>
+
+                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
+                            <SideList Text="Loyalty Card" />
+                        </NavLink>
+
+                    </AccordionDetails>
+                </Accordion>
+
 
                 <NavLink to="/vendor/dashboard" style={Navlinksx}>
                     <SideList Text="Coupons Mangement" />

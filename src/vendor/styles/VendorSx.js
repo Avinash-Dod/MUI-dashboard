@@ -62,3 +62,30 @@ export const InputFieldSx = {
     height: "80px",
     textAlign: "center",
 }
+
+export const containerImageSx = {
+    width: "250px",
+    margin: "0 auto",
+    verticalAlign: "middle",
+    boxSizing: "border-box"
+}
+
+export const closeButtonsx = {
+    position: 'absolute',
+    left: '95%',
+    top: '-69%',
+    backgroundColor: '#30AADD',
+    color: 'white',
+    width: "10%",
+}
+
+export const MenuIconSx = {
+    background: "#ffcccc",
+    borderRadius: "50%",
+    width: " 80px",
+    height: "80px",
+    margin:"0% auto 5%",
+    display: "flex",
+    justifyContent: " center",
+    alignItems: "center",
+}

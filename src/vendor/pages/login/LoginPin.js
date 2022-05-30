@@ -6,6 +6,7 @@ import { LoginContainer, LogoImage, MainBox, MainContainer } from "../../styles/
 import { InputFieldSx, PrimaryButton } from "../../styles/VendorSx"
 
 const LoginPin = () => {
+    
     return (
         <Box >
             <Stack direction="row" flexDirection="row" justifyContent="start" >
@@ -15,8 +16,8 @@ const LoginPin = () => {
                     marginLeft: { xs: 'none', md: 'none', lg: '50%', xl: '50%' }
                 }} >
 
-                    <MainBox padding={12}  textAlign="center" >
-                    <LogoImage />
+                    <MainBox padding={12} textAlign="center" >
+                        <LogoImage />
 
                         <PageText name="Login" variant="h3" component="span" mb="7%" textAlign="left" width="100%" />
                         <PageText name="Enter your Login PIN" variant="p" component="div" width="100%"
@@ -28,7 +29,7 @@ const LoginPin = () => {
                                     <Grid item xs={1}>
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>
-                                    
+
                                     <Grid item xs={1}>
                                         <input style={InputFieldSx} type="text" maxLength={1} />
                                     </Grid>

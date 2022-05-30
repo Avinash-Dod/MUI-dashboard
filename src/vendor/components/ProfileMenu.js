@@ -1,33 +1,44 @@
 
 import { KeyboardArrowDown } from "@mui/icons-material";
-import { Avatar, Box, IconButton, Menu, MenuItem, Tooltip, Typography } from "@mui/material"
+import { Avatar, Box, IconButton, Menu, Tooltip, Typography } from "@mui/material"
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+
+import { SettingMenu } from "../../components/UI/UI";
+import VendorProfile from "../pages/VendorProfile";
+import DeleteAccount from "./modals/DeleteAccount";
 
 const ProfileMenu = () => {
 
     const [anchorElUser, setAnchorElUser] = useState(null);
+    const [profile, setProfile] = useState(false)
+    console.log(profile);
+    const [deleteAccount, setDelete] = useState(false)
+    const [pin, setPin] = useState(false)
+    const [document, setDocument] = useState(false)
+    const [logout, setLogout] = useState(false)
+
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-    const Setting = [
-        {
-            Name: "Profile",
-            href: "/vendor/profile"
-        },
-        {
-            Name: "Account Management",
-            href: "/vendor/dashboard"
-        },
-        {
-            Name: "Logout",
-            href: "/vendor/dashboard"
-        }
-    ]
-    
+    const handleProfile = () => {
+        setProfile(true)
+    }
+    const handleDelete = () => {
+        setDelete(true)
+    }
+    const handlePin = () => {
+        setPin(true)
+    }
+    const handleDocument = () => {
+        setDocument(true)
+    }
+    const handleLogout = () => {
+        setLogout(true)
+    }
+
     return (
         <Box sx={{ flexGrow: 0 }}>
 
@@ -56,18 +67,36 @@ const ProfileMenu = () => {
                     vertical: 'top',
                     horizontal: 'right',
                 }}
+
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                {Setting.map((Item) => (
-                    <NavLink to={Item.href} style={{ textDecoration: "none", color: "#212529" }}>
-                    <MenuItem onClick={handleCloseUserMenu} key={Item.Name}>
-                        <Typography textAlign="center" >{Item.Name}</Typography>
 
-                    </MenuItem>
-                    </NavLink>
-                ))}
+                <SettingMenu onClick={handleProfile} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
+                    <Typography textAlign="center" >Profile</Typography>
 
+
+                </SettingMenu>
+                <SettingMenu onClick={handleDelete} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
+                    <Typography textAlign="center" >Delete Account</Typography>
+
+                </SettingMenu>
+                <SettingMenu onClick={handlePin} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
+                    <Typography textAlign="center" >Change Pin</Typography>
+
+                </SettingMenu>
+                <SettingMenu onClick={handleDocument} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
+                    <Typography textAlign="center" >Document</Typography>
+
+                </SettingMenu>
+                <SettingMenu onClick={handleLogout} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
+                    <Typography textAlign="center" >Logout</Typography>
+                </SettingMenu>
+
+                <VendorProfile open={profile} close={setProfile} />
+                <DeleteAccount open={deleteAccount} close={setDelete} />
+                
+                
 
             </Menu>
         </Box>

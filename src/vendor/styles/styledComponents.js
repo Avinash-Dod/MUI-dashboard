@@ -10,7 +10,7 @@ export const LoginContainer = () => {
         <WelcomeContainer sx={{ display: { xs: 'none', md: 'none', lg: 'flex', xl: 'flex' } }} >
             <Box>
                 <VendorIcon sx={MsqaureSx}>
-                    <img src={MsquareLogo} alt="Msquare" style={{margin:"auto", height: "90px", width: "120px" }} />
+                    <img src={MsquareLogo} alt="Msquare" style={{ margin: "auto", height: "90px", width: "120px" }} />
                 </VendorIcon>
 
                 <PageText name="Welcome to M Square" variant="h3" component="span" mt="8%" color="#ffffff" />
@@ -23,11 +23,10 @@ export const LogoImage = () => {
     return (
         <Box sx={{ display: { xs: 'block', md: 'block', lg: 'none', xl: 'none' } }}>
             <VendorIcon sx={MsqaureLogoSx}  >
-                <img src={MsLogo} alt="Msquare" style={{ width:"65%" }} />                
+                <img src={MsLogo} alt="Msquare" style={{ width: "65%" }} />
             </VendorIcon>
 
         </Box>
-
     )
 }
 
@@ -41,7 +40,7 @@ export const BackButton = () => {
 
 export const Text = (props) => {
     const { variant, component, name, color, display, width, padding, mt, mb, textAlign, fontWeight, float, fontSize } = props
-    return (
+    return ( 
         <Typography variant={variant} component={component} name={name} color={color}
             sx={{
                 width: { width },
@@ -109,6 +108,12 @@ width: 100%;
 `
 export const BranchList = styled(ListItemButton)`
 text-decoration: none !important;
-cursor: pointer;
 color:#212529;
+`
+export const VPageContainer= styled(Container)`\
+padding: 50px;
+width: 100%;
+height: 40em;
+margin: 0 auto;
+
 `

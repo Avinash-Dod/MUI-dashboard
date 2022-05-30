@@ -21,6 +21,13 @@ import SignLoginPin from "../vendor/pages/login/SignLoginPin"
 import ConfirmSignPin from "../vendor/pages/login/ConfirmSignPin"
 import Processing from "../vendor/pages/login/processing"
 import LoginPin from "../vendor/pages/login/LoginPin"
+import GroupManagement from "../vendor/pages/GroupManagement"
+import BranchManagement from "../vendor/pages/BranchManagement"
+import UserManagement from "../vendor/pages/UserManagement"
+import CouponManagement from "../vendor/pages/CouponManagement"
+import GeneralOffer from "../vendor/pages/GeneralOffer"
+import PrepaidCardOffer from "../vendor/pages/PrepaidCardOffer"
+import LoyaltyOffer from "../vendor/pages/LoyaltyCardOffer"
 
 const Navigation = () => {
     return (
@@ -39,8 +46,16 @@ const Navigation = () => {
 
             <Route path="/vendor/dashboard" element={<VendorDashboard />} />
             <Route path="/vendor/profile" element={<VendorProfile />} />
+            <Route path="/vendor/groupManagement" element={<GroupManagement />} />
+            <Route path="/vendor/branchManagement" element={<BranchManagement />} />
+            <Route path="/vendor/userManagement" element={<UserManagement />} />
+            <Route path="/vendor/generalOffer" element={<GeneralOffer />} />
+            <Route path="/vendor/prepaidCardOffer" element={<PrepaidCardOffer />} />
+            <Route path="/vendor/loyaltyCardOffer" element={<LoyaltyOffer />} />
+            <Route path="/vendor/couponManagement" element={<CouponManagement />} />
 
             {/* Vendor Login routes */}
+            
             <Route path="/vendor/vLogin" element={<VendorLogin />} />
             <Route path="/vendor/loginpin" element={<LoginPin />} />
             <Route path="/vendor/forgot" element={<ForgotLoginPin />} />
@@ -63,3 +78,4 @@ const Navigation = () => {
     )
 }
 export default Navigation
+
