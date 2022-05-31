@@ -2,18 +2,15 @@ import { ArrowRightAlt } from "@mui/icons-material"
 import { Box, Grid, Stack } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import Coupon from '../../assets/coupons.png'
-import SupportIcon from '../../assets/support.png'
 import GroupManage from '../../assets/group-managment.png'
 import OfferManage from '../../assets/offer-managment.png'
 import BranchManage from '../../assets/branch-managment.png'
-import AccountManage from '../../assets/account-managment.png'
 import ProfileManage from '../../assets/profile-managment.png'
 import PrepaidCard from '../../assets/prepaid-card-managment.png'
 import LoyaltyPoint from '../../assets/loyalty-point-managment.png'
 import { VendorHeader } from "../components/VendorHeader"
 import VendorSidebar from "../Sidebar/VendorSidebar"
 import { CardButton, PageContainer, PageText, VendorCard, VendorCardContent, VendorCardHead, VendorIcon } from "../../components/UI/UI"
-
 
 
 const VendorDashboard = () => {
@@ -23,11 +20,7 @@ const VendorDashboard = () => {
             src: ProfileManage,
             href: "/vendor/profile"
         },
-        {
-            Name: "Account Management",
-            src: AccountManage,
-            href: "/vendor/profile"
-        },
+       
         {
             Name: "Group Management",
             src: GroupManage,
@@ -64,11 +57,7 @@ const VendorDashboard = () => {
             src: LoyaltyPoint,
             href: "/vendor/profile"
         },
-        {
-            Name: "Support",
-            src: SupportIcon,
-            href: "/vendor/profile"
-        },
+       
 
     ]
 

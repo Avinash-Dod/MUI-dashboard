@@ -89,3 +89,14 @@ export const MenuIconSx = {
     justifyContent: " center",
     alignItems: "center",
 }
+
+export const ListSx={
+    margin: "65px 0 50px",
+    padding: "30px 50px",
+    background: "#f2f2f2",
+    borderRadius: "10px",
+}
+
+export const ListIconSx={
+    width:"40%",
+}

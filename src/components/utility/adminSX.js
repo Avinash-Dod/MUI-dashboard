@@ -15,6 +15,5 @@ export const Navlinksx = {
 export const AccordianSx = {
     background: "#30AADD",
     color: "#ffffff",
-    
 
 }

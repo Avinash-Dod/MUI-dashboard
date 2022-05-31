@@ -1,9 +1,12 @@
-import { MsqaureLogoSx, MsqaureSx } from "./VendorSx"
+import {  MsqaureLogoSx, MsqaureSx } from "./VendorSx"
 import MsquareLogo from '../assets/logo.png'
 import MsLogo from '../assets/logo-white.PNG'
 import { ArrowBack } from "@mui/icons-material"
 import { InputField, PageText, VendorIcon } from "../../components/UI/UI"
 import { Avatar, Box, Button, Container, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
+
+
+
 
 export const LoginContainer = () => {
     return (
@@ -40,7 +43,7 @@ export const BackButton = () => {
 
 export const Text = (props) => {
     const { variant, component, name, color, display, width, padding, mt, mb, textAlign, fontWeight, float, fontSize } = props
-    return ( 
+    return (
         <Typography variant={variant} component={component} name={name} color={color}
             sx={{
                 width: { width },
@@ -110,7 +113,7 @@ export const BranchList = styled(ListItemButton)`
 text-decoration: none !important;
 color:#212529;
 `
-export const VPageContainer= styled(Container)`\
+export const VPageContainer = styled(Container)`
 padding: 50px;
 width: 100%;
 height: 40em;

@@ -6,7 +6,6 @@ import { SideList } from "../../components/UI/UI"
 import { AccordianSx, Navlinksx, SidebarSX } from "../../components/utility/adminSX"
 
 
-
 const VendorSidebar = () => {
     return (
 
@@ -31,9 +30,7 @@ const VendorSidebar = () => {
 
                 <Accordion sx={AccordianSx} disableGutters elevation={0}>
                     <AccordionSummary
-                        expandIcon={<ExpandMore color="other" />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        expandIcon={<ExpandMore color="other" />}                       
                     >
                         <Typography>Offer Management</Typography>
                     </AccordionSummary>
@@ -69,37 +66,30 @@ const VendorSidebar = () => {
 
                 <Accordion sx={AccordianSx} disableGutters elevation={0}>
                     <AccordionSummary
-                        expandIcon={<ExpandMore color="other" />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
+                        expandIcon={<ExpandMore color="other" />}                       
                     >
-                        <Typography>Support</Typography>
+                        <Typography>Offer Management</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
+
                         <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="About Us" />
+                            <SideList Text="General" />
                         </NavLink>
+
                         <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="Terms & Conditions" />
+                            <SideList Text="Prepaid Cards" />
                         </NavLink>
+
                         <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="Privacy Policy" />
-                        </NavLink>
-                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="Faq's" />
-                        </NavLink>
-                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="How it Work's" />
-                        </NavLink>
-                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="Need Help" />
-                        </NavLink>
-                        <NavLink to="/vendor/dashboard" style={Navlinksx}>
-                            <SideList Text="Version" />
+                            <SideList Text="Loyalty Card" />
                         </NavLink>
 
                     </AccordionDetails>
                 </Accordion>
+
+                
+
+               
 
             </List>
 

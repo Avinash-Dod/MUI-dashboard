@@ -1,21 +1,13 @@
 
 import { Close } from "@mui/icons-material";
-import { Dialog, DialogTitle, DialogContent, DialogActions, Grid, Switch, MenuItem } from "@mui/material"
-import { useState } from "react";
+import { Dialog, DialogTitle, DialogContent, DialogActions, Grid, Switch } from "@mui/material"
 import { InputField, SubmitButton } from "../../../components/UI/UI";
 import { Text } from "../../styles/styledComponents";
 
-const Type = ["Group Type","Type1", "Type2", "Type3", "Type4"];
-
-const AddUser = (props) => {
-    const [gType, setGtype] = useState('Group Type')
-
+const EditUser = (props) => {
     const handleClose = () => {
         props.close(false)
     };
-    const handleChange = (event) => {
-        setGtype(event.target.value);
-      };
 
     return (
         <Dialog
@@ -23,30 +15,19 @@ const AddUser = (props) => {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            scroll="body" fullWidth
-        >
+            scroll="body" fullWidth   >
 
             <DialogTitle id="alert-dialog-title">
-                <Text name="Add User" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
+                <Text name="Edit User" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
                 {/* <IconButton onClick={handleClose} sx={{ width: "10%", float: "right", position: "relative" }}>
                     <Close />
                 </IconButton> */}
             </DialogTitle>
-
             <form>
                 <DialogContent>
 
                     <InputField placeholder="Enter Your Name" />
-                    <InputField select value={gType} onChange={handleChange} placeholder="Group Type" >
-                    {Type.map((option) => (
-            <MenuItem key={Object.keys(option)} value={option}>
-              {option}
-            </MenuItem>
-          ))}
-          </InputField>
-
-
-
+                    <InputField placeholder=" Type" />
                     <InputField placeholder="Branch" />
                     <InputField placeholder="Email" />
                     <InputField placeholder="Mobile Number" />
@@ -62,14 +43,14 @@ const AddUser = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Grid container columns={1}>
-                        <Grid item xs={12} textAlign="left">
+                        <Grid item xs={12} textAlign="left" padding={1} >
                             <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "40%" }} > Save </SubmitButton>
                         </Grid>
                     </Grid>
                 </DialogActions>
             </form>
         </Dialog>
+
     )
 }
-export default AddUser
-
+export default EditUser

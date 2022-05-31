@@ -1,8 +1,8 @@
 
 import { Close } from "@mui/icons-material";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Checkbox, FormGroup, FormControlLabel, Divider, Grid } from "@mui/material"
-import { InputField, SubmitButton } from "../../../components/UI/UI";
-import { Text } from "../../styles/styledComponents";
+import { InputField, SubmitButton } from "../../../../components/UI/UI";
+import { Text } from "../../../styles/styledComponents";
 
 const AddGroup = (props) => {
     const handleClose = () => {

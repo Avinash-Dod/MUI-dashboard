@@ -96,9 +96,9 @@ color: #fff;
 `;
 
 export const PageContainer = styled(Container)`
-width: 84%;
+width: 83%;
 position: relative;
-left: 15%;
+left: 16%;
 background:#fafafa;
 top: 72px;
 height:100%;

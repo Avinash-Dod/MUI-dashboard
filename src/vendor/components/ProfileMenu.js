@@ -5,7 +5,8 @@ import { useState } from "react";
 
 import { SettingMenu } from "../../components/UI/UI";
 import VendorProfile from "../pages/VendorProfile";
-import DeleteAccount from "./modals/DeleteAccount";
+import { DeleteModal, Text } from "../styles/styledComponents";
+import DeleteAccount from "./modals/action modals/DeleteAccount";
 
 const ProfileMenu = () => {
 
@@ -40,16 +41,17 @@ const ProfileMenu = () => {
     }
 
     return (
-        <Box sx={{ flexGrow: 0 }}>
+        <Box sx={{ flexGrow: 0 }} >
 
             <Tooltip title="Open Profile settings" >
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} edge="end">
                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                    <Typography variant="body1" component="span" sx={{ margin: "0px 10px 0px 10px ", float: "right", textAlign: "left", color: "#ffffff" }}>
+                    <Typography variant="body2" component="span" sx={{ margin: "0px 10px 0px 10px ", float: "right", textAlign: "left", color: "#ffffff" }}>
                         Vendor Name
                         <br></br>
-                        admin@gmail.com
+                        +91 9876543210
                     </Typography>
+
                     <KeyboardArrowDown color="white" />
 
                 </IconButton>
@@ -75,7 +77,6 @@ const ProfileMenu = () => {
                 <SettingMenu onClick={handleProfile} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
                     <Typography textAlign="center" >Profile</Typography>
 
-
                 </SettingMenu>
                 <SettingMenu onClick={handleDelete} sx={{ bgcolor: "#30AADD", color: "#fff" }}>
                     <Typography textAlign="center" >Delete Account</Typography>
@@ -96,8 +97,6 @@ const ProfileMenu = () => {
                 <VendorProfile open={profile} close={setProfile} />
                 <DeleteAccount open={deleteAccount} close={setDelete} />
                 
-                
-
             </Menu>
         </Box>
     )
