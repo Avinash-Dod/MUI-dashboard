@@ -28,6 +28,12 @@ import CouponManagement from "../vendor/pages/CouponManagement"
 import GeneralOffer from "../vendor/pages/GeneralOffer"
 import PrepaidCardOffer from "../vendor/pages/PrepaidCardOffer"
 import LoyaltyOffer from "../vendor/pages/LoyaltyCardOffer"
+import PrepaidCardManagement from "../vendor/pages/PrepaidCardManagement"
+import MyPrepaidCard from "../vendor/pages/MyPrepaidCard"
+import PrepaidAccess from "../vendor/pages/PrepaidAccess"
+import LoyaltyCardManagement from "../vendor/pages/LoyaltyCardManagement"
+import MyLoyaltyCard from "../vendor/pages/MyLoyaltyCard"
+import LoyaltyAccess from "../vendor/pages/LoyaltyAccess"
 
 const Navigation = () => {
     return (
@@ -53,9 +59,15 @@ const Navigation = () => {
             <Route path="/vendor/prepaidCardOffer" element={<PrepaidCardOffer />} />
             <Route path="/vendor/loyaltyCardOffer" element={<LoyaltyOffer />} />
             <Route path="/vendor/couponManagement" element={<CouponManagement />} />
+            <Route path="/vendor/prepaidcardmanagement" element={<PrepaidCardManagement />} />
+            <Route path="/vendor/myprepaidcard" element={<MyPrepaidCard />} />
+            <Route path="/vendor/prepaidaccess" element={<PrepaidAccess />} />
+            <Route path="/vendor/loyaltycardmanagement" element={<LoyaltyCardManagement />} />
+            <Route path="/vendor/myloyaltycard" element={<MyLoyaltyCard />} />
+            <Route path="/vendor/loyaltyaccess" element={<LoyaltyAccess />} />
 
             {/* Vendor Login routes */}
-            
+
             <Route path="/vendor/vLogin" element={<VendorLogin />} />
             <Route path="/vendor/loginpin" element={<LoginPin />} />
             <Route path="/vendor/forgot" element={<ForgotLoginPin />} />

@@ -7,7 +7,7 @@ import AadharCard from '../../assets/aadhar.png'
 
 
 const VendorProfile = (props) => {
-    console.log(props.open);
+    
     const handleClose = () => {
         props.close(false)
     };

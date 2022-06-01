@@ -1,10 +1,11 @@
 
-import { Close } from "@mui/icons-material";
-import { Dialog, DialogTitle, DialogContent, DialogActions, Checkbox, FormGroup, FormControlLabel, Divider, Grid } from "@mui/material"
-import { InputField, SubmitButton } from "../../../../components/UI/UI";
+import { Dialog, DialogContent, Box, Grid, DialogTitle } from "@mui/material"
+import { SubmitButton } from "../../../../components/UI/UI";
 import { Text } from "../../../styles/styledComponents";
+import DeleteIcon from '../../../assets/delete-icon-modal.png'
+import { AddUserOTP, MenuIconSx } from "../../../styles/VendorSx";
 
-const AddGroup = (props) => {
+const ChangePin = (props) => {
     const handleClose = () => {
         props.close(false)
     };
@@ -15,93 +16,80 @@ const AddGroup = (props) => {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            scroll="body" fullWidth
-        >
+            scroll="body" fullWidth      >
 
-            <DialogTitle id="alert-dialog-title">
-                <Text name="Add Group" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
+<DialogTitle id="alert-dialog-title">
+                <Text name="Change Pin" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
                 {/* <IconButton onClick={handleClose} sx={{ width: "10%", float: "right", position: "relative" }}>
                     <Close />
                 </IconButton> */}
             </DialogTitle>
-            <form>
-                <DialogContent>
 
-                    <InputField placeholder="Enter Your Title" />
-                    <Text name="Profile Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
 
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-                    <Text name="Account Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
+            <DialogContent>
+                <Box sx={{ textAlign: "center", padding: 5 }}>
+                   <Text name="Enter Your Old Pin" variant="body1" component="div" fontWeight="bold" textAlign="left" mb="3%" />
+                    <form >
+                        <Grid container columns={4}>
 
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-                    <Text name="Group Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
 
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Create" control={<Checkbox />} label="Create" labelPlacement="end" />
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-                    <Text name="User Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
-
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Create" control={<Checkbox />} label="Create" labelPlacement="end" />
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-                    <Text name="Offer Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
-
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Create" control={<Checkbox />} label="Create" labelPlacement="end" />
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-
-                    <Text name="Coupon Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
-
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Create" control={<Checkbox />} label="Create" labelPlacement="end" />
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-                    <Text name="Prepaid Card Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
-
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Create" control={<Checkbox />} label="Create" labelPlacement="end" />
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-                    <Text name="Loyalty Point Management" textAlign="left" component="span" variant="p" fontWeight="bold" mt="4%" />
-
-                    <FormGroup aria-label="position" row>
-                        <FormControlLabel value="Create" control={<Checkbox />} label="Create" labelPlacement="end" />
-                        <FormControlLabel value="Edit" control={<Checkbox />} label="Edit" labelPlacement="end" />
-                        <FormControlLabel value="View" control={<Checkbox />} label="View" labelPlacement="end" />
-                    </FormGroup>
-                    <Divider />
-
-                </DialogContent>
-                <DialogActions>
-                    <Grid container columns={1}>
-                        <Grid item xs={12} textAlign="left">
-                            <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "40%" }} > Save </SubmitButton>
                         </Grid>
-                    </Grid>
-                </DialogActions>
-            </form>
+                        <Text name="Enter Your New Pin" variant="body1" component="div" fontWeight="bold" textAlign="left" mb="3%" mt="2%" />
+                        <Grid container columns={4}>
+
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+
+                        </Grid>
+
+                        <Text name="Enter Your Confirm Pin" variant="body1" component="div" fontWeight="bold" textAlign="left" mb="3%" mt="2%" />
+                        <Grid container columns={4}>
+
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+                            <Grid item xs={1}>
+                                <input style={AddUserOTP} type="text" maxLength={1} />
+                            </Grid>
+
+                        </Grid>
+
+                    </form>
+
+                    <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "50%",mt:"4%" }} > Save </SubmitButton>
+
+                </Box>
+            </DialogContent>
+
         </Dialog>
     )
 }
-export default AddGroup
+export default ChangePin

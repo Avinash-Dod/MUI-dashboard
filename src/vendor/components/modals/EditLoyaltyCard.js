@@ -4,7 +4,7 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, Grid, Switch } from 
 import { InputField, SubmitButton } from "../../../components/UI/UI";
 import { Text } from "../../styles/styledComponents";
 
-const AddGeneralOffer = (props) => {
+const EditLoyaltyCard = (props) => {
     const handleClose = () => {
         props.close(false)
     };
@@ -15,25 +15,22 @@ const AddGeneralOffer = (props) => {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            scroll="body" fullWidth       >
+            scroll="body" fullWidth   >
 
             <DialogTitle id="alert-dialog-title">
-                <Text name="Add General Offer" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
+                <Text name="Edit Loyalty Card" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
                 {/* <IconButton onClick={handleClose} sx={{ width: "10%", float: "right", position: "relative" }}>
                     <Close />
                 </IconButton> */}
             </DialogTitle>
-
             <form>
                 <DialogContent>
 
-                    <InputField placeholder="General Offer" />
-                    <InputField placeholder=" Offer Name" />
-                    <InputField placeholder="Offer Type" />
-                    <InputField placeholder="Min Shop" />
-                    <InputField placeholder="Max Shop" />
+                    <InputField placeholder="Loyalty Card Offer" />
+                    <InputField placeholder="Amount" />
+                    <InputField placeholder="Get Reward Point" />
+                    <InputField placeholder="Multiple By" />
                     <InputField placeholder="Valid Date" />
-                    <InputField placeholder="T&c" multiline rows={4} />
 
                     <Grid container columns={2}>
                         <Grid item xs={1} >
@@ -47,13 +44,14 @@ const AddGeneralOffer = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Grid container columns={1}>
-                        <Grid item xs={12} textAlign="left">
+                        <Grid item xs={12} textAlign="left" padding={1} >
                             <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "40%" }} > Save </SubmitButton>
                         </Grid>
                     </Grid>
                 </DialogActions>
             </form>
         </Dialog>
+
     )
 }
-export default AddGeneralOffer
+export default EditLoyaltyCard

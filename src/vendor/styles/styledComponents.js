@@ -120,3 +120,15 @@ height: 40em;
 margin: 0 auto;
 
 `
+export const Offer = styled(Button)`
+font-weight: 600;
+color: #fff;
+border-radius: 31px;
+font-size: 18px;
+margin-top:4%;
+margin-bottom:%;
+margin-left:2%;
+margin-right:auto;
+float:left;
+
+`

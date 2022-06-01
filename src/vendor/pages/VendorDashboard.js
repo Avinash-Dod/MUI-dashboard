@@ -15,11 +15,6 @@ import { CardButton, PageContainer, PageText, VendorCard, VendorCardContent, Ven
 
 const VendorDashboard = () => {
     const Vendor = [
-        {
-            Name: "Profile Management",
-            src: ProfileManage,
-            href: "/vendor/profile"
-        },
        
         {
             Name: "Group Management",

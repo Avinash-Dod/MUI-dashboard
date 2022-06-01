@@ -1,10 +1,18 @@
 
 import { Close } from "@mui/icons-material";
-import { Dialog, DialogTitle, DialogContent, DialogActions, Grid, Switch } from "@mui/material"
+import { Dialog, DialogTitle, DialogContent, DialogActions, Grid, Switch, MenuItem } from "@mui/material"
+import { useState } from "react";
 import { InputField, SubmitButton } from "../../../components/UI/UI";
 import { Text } from "../../styles/styledComponents";
 
+const Type = ["Group Type", "Type1", "Type2", "Type3", "Type4"];
+
 const EditUser = (props) => {
+    const [gType, setGtype] = useState('Group Type')
+    const handleChange = (event) => {
+        setGtype(event.target.value);
+    };
+
     const handleClose = () => {
         props.close(false)
     };
@@ -27,7 +35,14 @@ const EditUser = (props) => {
                 <DialogContent>
 
                     <InputField placeholder="Enter Your Name" />
-                    <InputField placeholder=" Type" />
+                    <InputField select value={gType} onChange={handleChange} placeholder="Group Type" >
+                        {Type.map((option) => (
+                            <MenuItem key={Object.keys(option)} value={option}>
+                                {option}
+                            </MenuItem>
+                        ))}
+
+                    </InputField>
                     <InputField placeholder="Branch" />
                     <InputField placeholder="Email" />
                     <InputField placeholder="Mobile Number" />

@@ -84,19 +84,42 @@ export const MenuIconSx = {
     borderRadius: "50%",
     width: " 80px",
     height: "80px",
-    margin:"0% auto 5%",
+    margin: "0% auto 5%",
     display: "flex",
     justifyContent: " center",
     alignItems: "center",
 }
 
-export const ListSx={
+export const ListSx = {
     margin: "65px 0 50px",
     padding: "30px 50px",
     background: "#f2f2f2",
     borderRadius: "10px",
 }
 
-export const ListIconSx={
-    width:"40%",
+export const ListIconSx = {
+    width: "40%",
+}
+
+export const CardSx = {
+    width: { xs: '80%', md: '80%', lg: '50%', xl: '50%' },
+    margin: "auto",
+    borderRadius: "15px",
+    padding: { xs: '70px 15px', md: '70px 15px', lg: '70px 15px', xl: '70px 15px' },
+}
+
+export const AddUserOTP = {
+    fontSize: "20px",
+    lineHeight: "20px",
+    outline: "none",
+    color: "#081131",
+    background: "#EBECEF",
+    border: " 1px solid #EBECEF",
+    borderRadius: "8px",
+    padding: " 14px 16px",
+    transition: "0.2s ease-out",
+    width: "35px",
+    height: "35px",
+    textAlign: "center",
+    margin: "0 10px",
 }

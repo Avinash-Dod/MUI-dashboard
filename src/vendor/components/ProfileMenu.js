@@ -2,17 +2,16 @@
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { Avatar, Box, IconButton, Menu, Tooltip, Typography } from "@mui/material"
 import { useState } from "react";
-
 import { SettingMenu } from "../../components/UI/UI";
 import VendorProfile from "../pages/VendorProfile";
-import { DeleteModal, Text } from "../styles/styledComponents";
+import ChangePin from "./modals/action modals/ChangePin";
 import DeleteAccount from "./modals/action modals/DeleteAccount";
+import Logoutuser from "./modals/action modals/Logout";
 
 const ProfileMenu = () => {
 
     const [anchorElUser, setAnchorElUser] = useState(null);
     const [profile, setProfile] = useState(false)
-    console.log(profile);
     const [deleteAccount, setDelete] = useState(false)
     const [pin, setPin] = useState(false)
     const [document, setDocument] = useState(false)
@@ -96,7 +95,9 @@ const ProfileMenu = () => {
 
                 <VendorProfile open={profile} close={setProfile} />
                 <DeleteAccount open={deleteAccount} close={setDelete} />
-                
+                <ChangePin open={pin} close={setPin} />
+                <Logoutuser open={logout} close={setLogout} />
+
             </Menu>
         </Box>
     )

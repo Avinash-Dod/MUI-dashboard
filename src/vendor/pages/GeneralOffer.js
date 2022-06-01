@@ -1,72 +1,94 @@
 
 import { Add } from "@mui/icons-material"
-import { Box, Stack } from "@mui/material"
-import {  CardButton,  PageContainer, PageText } from "../../components/UI/UI"
+import { Box, IconButton, List, ListItem, ListItemText, Stack, Switch } from "@mui/material"
+import { CardButton, PageContainer, PageText } from "../../components/UI/UI"
 import { VendorHeader } from "../components/VendorHeader"
 import VendorSidebar from "../Sidebar/VendorSidebar"
 import { Text, VPageContainer } from "../styles/styledComponents"
 import containerImage from '../assets/no-dashboard.png'
-import { containerImageSx } from "../styles/VendorSx"
+import { containerImageSx, ListSx } from "../styles/VendorSx"
 import { useState } from "react"
 import AddGeneralOffer from "../components/modals/AddGeneralOffer"
+import DeleteIcon from '../assets/delete-icon.png'
+import EditGeneralOffer from "../components/modals/EditGeneralOffer"
+import DeleteGeneralOffer from "../components/modals/action modals/DeleteGeneralOffer"
+import DeactivateGeneralOffer from "../components/modals/action modals/DeactivateGeneralOffer"
 
 
 const GeneralOffer = () => {
     const [open, setOpen] = useState(false);
+    const [edit, setEdit] = useState(false);
+    const [Delete, setDelete] = useState(false);
+    const [Deactivate, setDeactivate] = useState(false);
     const handleOpen = () => {
         setOpen(true)
     }
+    const handleEdit = () => {
+        setEdit(true)
+    }
+    const handleDelete = () => {
+        setDelete(true)
+    }
+    const handleDeactivate = () => {
+        setDeactivate(true)
+    }
 
     return (
-        <Box >
+        <Box>
             <VendorHeader />
             <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" height='100%' >
                 <VendorSidebar />
                 <PageContainer maxWidth='100%'  >
-                {/* <List >
-                                {location.map(branch => (
-                                    <>
-                                        <OfferList color="#666" key={Object.keys(branch.address)} >
-                                            <ListItem sx={{ width: "100%" }}   >
-
-                                                <ListItemAvatar sx={{ float: "left" }}>
-                                                    <img src={branch.src} alt={branch.OfferName} />
-                                                </ListItemAvatar>
-                                                <ListItemText sx={{ width: "100%",marginRight:"15%" }} >
-                                                    <Text name={branch.OfferName} variant="p"
-                                                        component="p" width="100%" fontWeight="bold" />
-
-                                                    <Text name={branch.address} variant="subtitle2"
-                                                        component="div" fontWeight="normal" width="100%" fontSize="12px"  />
-
-                                                </ListItemText>
-                                                <ListItemText >
-                                                    <ArrowForwardIos />
-                                                </ListItemText>
-
-                                            </ListItem>
-                                        </OfferList>
-                                        <Divider />
-                                    </>
-
-                                ))}
-
-                            </List> */}
+                    <PageText variant="h4" component="div" name="General Offer" width="100%" color="#30AADD" mt="4%" />
                     <VPageContainer >
+                        <List sx={ListSx} >
+                            {/* {props.addedItems[1].length ?
+(
+props.addedItems[1].map(item => {
+  return (
+    
+  )
+})
+) :
+<tr><td colSpan={4}><h3> <i class="fa fa-times-circle"></i> Nothing in Cart</h3></td></tr>
+} */}
 
-                        <PageText variant="h4" component="div" name="General Offer" width="100%" color="#30AADD" mb="6%" mt="4%" />
+                            <ListItem sx={{ width: "100%" }}   >
+
+                                <ListItemText sx={{ width: "100%", marginRight: "15%" }} onClick={handleEdit} >
+
+                                    <Text name="10% on 1000" variant="h6"
+                                        component="p" width="100%" fontWeight="bold" />
+                                </ListItemText>
+
+                                <ListItemText >
+                                    <IconButton onClick={handleDelete}>
+                                        <img src={DeleteIcon} alt="location_icon" />
+                                    </IconButton>
+                                </ListItemText>
+
+                                <ListItemText sx={{ marginLeft: "4%" }}  >
+                                    <Switch size="medium" onClick={handleDeactivate} />
+                                </ListItemText>
+
+                            </ListItem>
+
+                        </List>
+
                         <Box sx={{ marginBottom: 5 }}>
                             <img alt="containerImage" src={containerImage} style={containerImageSx} />
                         </Box>
 
                         <Text name="No Data Available,There is no data to show you right now." mb="2%" variant="h6" component="div" />
                         <CardButton name="Add" startIcon={<Add />} size="medium" onClick={handleOpen} />
-                        
-                    </VPageContainer>                    
+
+                    </VPageContainer>
 
                 </PageContainer>
                 <AddGeneralOffer open={open} close={setOpen} />
-                
+                <EditGeneralOffer open={edit} close={setEdit} />
+                <DeleteGeneralOffer open={Delete} close={setDelete} />
+                <DeactivateGeneralOffer open={Deactivate} close={setDeactivate} />
             </Stack >
 
         </Box >

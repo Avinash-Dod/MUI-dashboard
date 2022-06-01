@@ -2,9 +2,9 @@
 import { Close } from "@mui/icons-material";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Grid } from "@mui/material"
 import { InputField, SubmitButton } from "../../../components/UI/UI";
-import { AccountFields, Text } from "../../styles/styledComponents";
+import { Text } from "../../styles/styledComponents";
 
-const AddBranch = (props) => {
+const AddLoyaltyCard = (props) => {
     const handleClose = () => {
         props.close(false)
     };
@@ -15,29 +15,23 @@ const AddBranch = (props) => {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            scroll="body" fullWidth
-        >
+            scroll="body" fullWidth  >
 
             <DialogTitle id="alert-dialog-title">
-                <Text name="Add Branch" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
+                <Text name="Add Loyalty Card" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
                 {/* <IconButton onClick={handleClose} sx={{ width: "10%", float: "right", position: "relative" }}>
                     <Close />
                 </IconButton> */}
             </DialogTitle>
+
             <form>
                 <DialogContent>
-
-                    <AccountFields placeholder="Featured Image" />
-                    <InputField placeholder="Properietry Name" />
-                    <InputField placeholder="Properietry Type" />
-                    <InputField placeholder="Email" />
-                    <InputField placeholder="Mobile Number" />
-                    <InputField placeholder="Enter Your Address" />
+                    <InputField placeholder="Card Name (Ex. Silver,Gold )" />
 
                 </DialogContent>
                 <DialogActions>
-                    <Grid container columns={1} >
-                        <Grid item xs={12} textAlign="left" padding={1}>
+                    <Grid container columns={1}>
+                        <Grid item xs={12} textAlign="left">
                             <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "40%" }} > Save </SubmitButton>
                         </Grid>
                     </Grid>
@@ -46,4 +40,4 @@ const AddBranch = (props) => {
         </Dialog>
     )
 }
-export default AddBranch
+export default AddLoyaltyCard

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { InputField, SubmitButton } from "../../../components/UI/UI";
 import { Text } from "../../styles/styledComponents";
 
-const Type = ["Group Type","Type1", "Type2", "Type3", "Type4"];
+const Type = ["Group Type", "Type1", "Type2", "Type3", "Type4"];
 
 const AddUser = (props) => {
     const [gType, setGtype] = useState('Group Type')
@@ -15,7 +15,7 @@ const AddUser = (props) => {
     };
     const handleChange = (event) => {
         setGtype(event.target.value);
-      };
+    };
 
     return (
         <Dialog
@@ -23,8 +23,7 @@ const AddUser = (props) => {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            scroll="body" fullWidth
-        >
+            scroll="body" fullWidth   >
 
             <DialogTitle id="alert-dialog-title">
                 <Text name="Add User" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
@@ -38,15 +37,13 @@ const AddUser = (props) => {
 
                     <InputField placeholder="Enter Your Name" />
                     <InputField select value={gType} onChange={handleChange} placeholder="Group Type" >
-                    {Type.map((option) => (
-            <MenuItem key={Object.keys(option)} value={option}>
-              {option}
-            </MenuItem>
-          ))}
-          </InputField>
+                        {Type.map((option) => (
+                            <MenuItem key={Object.keys(option)} value={option}>
+                                {option}
+                            </MenuItem>
+                        ))}
 
-
-
+                    </InputField>
                     <InputField placeholder="Branch" />
                     <InputField placeholder="Email" />
                     <InputField placeholder="Mobile Number" />

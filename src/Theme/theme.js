@@ -11,6 +11,9 @@ export const theme = createTheme({
         },
         other: {
             main: "#ffffff"
+        },
+        offer: {
+            main: "#FF0000"
         }
 
     },
@@ -24,11 +27,11 @@ export const theme = createTheme({
                     position: "relative",
                     borderRadius: "50px",
                     "&.Mui-disabled": {
-                        backgroundColor:"#30AADD",
-                        color:"#fff",
-                        opacity:0.7
-                        
-                        
+                        backgroundColor: "#30AADD",
+                        color: "#fff",
+                        opacity: 0.7
+
+
                     }
                 }
             }
