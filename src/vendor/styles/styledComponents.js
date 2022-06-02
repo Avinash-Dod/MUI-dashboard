@@ -1,9 +1,9 @@
-import {  MsqaureLogoSx, MsqaureSx } from "./VendorSx"
+import { MsqaureLogoSx, MsqaureSx } from "./VendorSx"
 import MsquareLogo from '../assets/logo.png'
 import MsLogo from '../assets/logo-white.PNG'
-import { ArrowBack } from "@mui/icons-material"
+import { ArrowBack, ExpandMore } from "@mui/icons-material"
 import { InputField, PageText, VendorIcon } from "../../components/UI/UI"
-import { Avatar, Box, Button, Container, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
+import { Accordion, Avatar, Box, Button, Container, IconButton, InputAdornment, ListItemButton, styled, Typography } from "@mui/material"
 
 
 
@@ -42,7 +42,7 @@ export const BackButton = () => {
 }
 
 export const Text = (props) => {
-    const { variant, component, name, color, display, width, padding, mt, mb, textAlign, fontWeight, float, fontSize } = props
+    const { variant, component, name, color, display, width, padding, mt, mb, ml, mr, textAlign, fontWeight, float, fontSize } = props
     return (
         <Typography variant={variant} component={component} name={name} color={color}
             sx={{
@@ -52,9 +52,12 @@ export const Text = (props) => {
                 display: { display },
                 paddingBottom: { padding },
                 marginTop: mt,
-                textAlign: textAlign,
+                marginRight: mr,
                 marginBottom: mb,
-                fontSize: fontSize
+                marginLeft: ml,
+                textAlign: textAlign,
+                fontSize: fontSize,
+
             }} >
             {name}
         </Typography>
@@ -130,5 +133,7 @@ margin-bottom:%;
 margin-left:2%;
 margin-right:auto;
 float:left;
-
+`
+export const Expand=styled(ExpandMore)`
+color:#fff;
 `

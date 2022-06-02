@@ -19,38 +19,38 @@ const VendorDashboard = () => {
         {
             Name: "Group Management",
             src: GroupManage,
-            href: "/vendor/profile"
+            href: "/vendor/groupmanagement"
         },
         {
             Name: "Branch Management",
             src: BranchManage,
-            href: "/vendor/profile"
+            href: "/vendor/branchmanagement"
         },
         {
             Name: "User Management",
             src: ProfileManage,
-            href: "/vendor/profile"
+            href: "/vendor/usermanagement"
         },
         {
             Name: "Offer Management",
             src: OfferManage,
-            href: "/vendor/profile"
+            href: "/vendor/generaloffer"
         },
         {
             Name: "Coupon Management",
             src: Coupon,
-            href: "/vendor/profile"
+            href: "/vendor/couponmanagement"
         },
         {
             Name: "Prepaid Card Management",
             src: PrepaidCard,
-            href: "/vendor/profile"
+            href: "/vendor/prepaidcardmanagement"
         },
 
         {
-            Name: "Loyalty Point Management",
+            Name: "Loyalty Card Management",
             src: LoyaltyPoint,
-            href: "/vendor/profile"
+            href: "/vendor/loyaltycardmanagement"
         },
        
 
@@ -62,7 +62,7 @@ const VendorDashboard = () => {
             <Stack direction="row" spacing={1} justifyContent="start" flexDirection="row" >
                 <VendorSidebar />
                 <PageContainer maxWidth='70%' >
-                    <PageText name="Dashboard" variant="h5" mt="35px"
+                    <PageText name="Dashboard" variant="h4" mt="35px"
                         component="div"
                         color="#30AADD"
                         display="flex"

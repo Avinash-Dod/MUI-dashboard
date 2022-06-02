@@ -3,10 +3,9 @@ export const SidebarSX = {
     background: "#30AADD",
     width: "16%",
     overflowY: "auto",
+    padding: "10px 20px 100px",
     height: "100%",
-    padding: "25px 15px 100px",
     overflowX: "hidden",
-
 }
 
 export const Navlinksx = {
@@ -15,5 +14,6 @@ export const Navlinksx = {
 export const AccordianSx = {
     background: "#30AADD",
     color: "#ffffff",
+    textAlign: "left",
 
 }

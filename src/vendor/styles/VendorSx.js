@@ -123,3 +123,58 @@ export const AddUserOTP = {
     textAlign: "center",
     margin: "0 10px",
 }
+
+export const AboutBoxSX = {
+
+    background: " #ededef",
+    padding: " 30px 15px",
+    borderRadius: " 10px",
+    margin: "20px 0 30px",
+
+}
+
+export const VersionBoxSx = {
+    display: " flex",
+    alignItems: " center",
+    background: " #ebf7fc",
+    width: "max-content",
+    padding: " 50px",
+    borderRadius: "10px",
+    marginBottom: "2%",
+}
+
+export const FaqAccordianSx = {
+    background: "#30AADD",
+    color: " #fff",
+    border: "1px solid #30AADD",
+    marginBottom: "2%",
+    padding: "5px"
+}
+
+export const FaqDetailsSx = {
+    background: "#4cb0da",
+    color: "#fff",
+}
+
+export const ModalCloseSx = {
+    // padding: "0",
+    
+    // margin: "-37px -35px -1rem auto",
+    // background: "#30AADD",
+    // bordeRadius: "50%",
+    // height: "40px",
+    // width: "40px",
+    // float: "right",
+    // fontSize:" 1.5rem",
+    // fontWeight: 700,
+    // lineHeight: 1,
+    // color: "#fff",
+    
+    // opacity: 1,
+
+    position: 'absolute',
+    left: '95%',
+    top: '-9%',
+    backgroundColor: 'lightgray',
+    color: 'gray',
+}

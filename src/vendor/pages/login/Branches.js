@@ -3,7 +3,7 @@ import { Box, Divider, List, ListItem, ListItemAvatar, ListItemText, Stack } fro
 import { PageText } from "../../../components/UI/UI"
 import locationIcon from '../../assets/map-icon.png'
 
-import { BranchList, LoginContainer, MainBox, MainContainer, Text, } from "../../styles/styledComponents"
+import { BranchList, LoginContainer, LogoImage, MainBox, MainContainer, Text, } from "../../styles/styledComponents"
 
 
 const Branches = () => {
@@ -45,7 +45,8 @@ const Branches = () => {
                     marginLeft: { xs: '0%', md: '0%', lg: '50%', xl: '50%' }
                 }}  >
 
-                    <MainBox justifyContent="center"   >
+                    <MainBox textAlign="center"  padding={15}            >
+                        <LogoImage />
 
                         <PageText name="Branches" variant="h4" component="span" mb="7%" textAlign="left" width="100%" />
 
@@ -59,12 +60,12 @@ const Branches = () => {
                                                 <ListItemAvatar sx={{ float: "left" }}>
                                                     <img src={branch.src} alt={branch.BranchName} />
                                                 </ListItemAvatar>
-                                                <ListItemText sx={{ width: "100%",marginRight:"15%" }} >
+                                                <ListItemText sx={{ width: "100%", marginRight: "15%" }} >
                                                     <Text name={branch.BranchName} variant="p"
                                                         component="p" width="100%" fontWeight="bold" />
 
                                                     <Text name={branch.address} variant="subtitle2"
-                                                        component="div" fontWeight="normal" width="100%" fontSize="12px"  />
+                                                        component="div" fontWeight="normal" width="100%" fontSize="12px" />
 
                                                 </ListItemText>
                                                 <ListItemText >

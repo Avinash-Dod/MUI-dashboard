@@ -1,11 +1,11 @@
-import { AppBar, Box, Container, Toolbar, Typography } from "@mui/material"
+import { AppBar,  Container, Toolbar, Typography } from "@mui/material"
 import { Logo } from "../../components/UI/UI"
 import LogoImage from '../../assets/logo.png'
 import ProfileMenu from "./ProfileMenu"
 
 export const VendorHeader = () => {
     return (
-        <Box >
+        
             <AppBar position="sticky"   >
                 <Container maxWidth="xl" >
                     <Toolbar >
@@ -18,6 +18,6 @@ export const VendorHeader = () => {
                     </Toolbar>
                 </Container>
             </AppBar>
-        </Box >
+        
     )
 }

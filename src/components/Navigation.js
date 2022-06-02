@@ -34,6 +34,12 @@ import PrepaidAccess from "../vendor/pages/PrepaidAccess"
 import LoyaltyCardManagement from "../vendor/pages/LoyaltyCardManagement"
 import MyLoyaltyCard from "../vendor/pages/MyLoyaltyCard"
 import LoyaltyAccess from "../vendor/pages/LoyaltyAccess"
+import AboutUs from "../vendor/pages/About"
+import Terms from "../vendor/pages/Terms"
+import PrivacyPolicy from "../vendor/pages/PrivacyPolicy"
+import Version from "../vendor/pages/Version"
+import FAQ from "../vendor/pages/Faq"
+import HowItWorks from "../vendor/pages/HowItWorks"
 
 const Navigation = () => {
     return (
@@ -52,19 +58,25 @@ const Navigation = () => {
 
             <Route path="/vendor/dashboard" element={<VendorDashboard />} />
             <Route path="/vendor/profile" element={<VendorProfile />} />
-            <Route path="/vendor/groupManagement" element={<GroupManagement />} />
-            <Route path="/vendor/branchManagement" element={<BranchManagement />} />
-            <Route path="/vendor/userManagement" element={<UserManagement />} />
-            <Route path="/vendor/generalOffer" element={<GeneralOffer />} />
-            <Route path="/vendor/prepaidCardOffer" element={<PrepaidCardOffer />} />
-            <Route path="/vendor/loyaltyCardOffer" element={<LoyaltyOffer />} />
-            <Route path="/vendor/couponManagement" element={<CouponManagement />} />
+            <Route path="/vendor/groupmanagement" element={<GroupManagement />} />
+            <Route path="/vendor/branchmanagement" element={<BranchManagement />} />
+            <Route path="/vendor/usermanagement" element={<UserManagement />} />
+            <Route path="/vendor/generaloffer" element={<GeneralOffer />} />
+            <Route path="/vendor/prepaidcardoffer" element={<PrepaidCardOffer />} />
+            <Route path="/vendor/loyaltycardoffer" element={<LoyaltyOffer />} />
+            <Route path="/vendor/couponmanagement" element={<CouponManagement />} />
             <Route path="/vendor/prepaidcardmanagement" element={<PrepaidCardManagement />} />
             <Route path="/vendor/myprepaidcard" element={<MyPrepaidCard />} />
             <Route path="/vendor/prepaidaccess" element={<PrepaidAccess />} />
             <Route path="/vendor/loyaltycardmanagement" element={<LoyaltyCardManagement />} />
             <Route path="/vendor/myloyaltycard" element={<MyLoyaltyCard />} />
             <Route path="/vendor/loyaltyaccess" element={<LoyaltyAccess />} />
+            <Route path="/vendor/about" element={<AboutUs />} />
+            <Route path="/vendor/terms&conditions" element={<Terms />} />
+            <Route path="/vendor/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/vendor/version" element={<Version />} />
+            <Route path="/vendor/faq" element={<FAQ />} />
+            <Route path="/vendor/howitwork" element={<HowItWorks />} />
 
             {/* Vendor Login routes */}
 
@@ -90,4 +102,6 @@ const Navigation = () => {
     )
 }
 export default Navigation
+
+
 

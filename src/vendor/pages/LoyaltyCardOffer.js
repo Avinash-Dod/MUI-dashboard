@@ -8,7 +8,7 @@ import { Text, VPageContainer } from "../styles/styledComponents"
 import containerImage from '../assets/no-dashboard.png'
 import { containerImageSx, ListSx } from "../styles/VendorSx"
 import { useState } from "react"
-import AddLoyaltyOffer from "../components/modals/AddLoyalty"
+import AddLoyaltyOffer from "../components/modals/AddLoyaltyOffer"
 import DeleteIcon from '../assets/delete-icon.png'
 import EditLoyaltyCard from "../components/modals/EditLoyaltyCard"
 import DeleteLoyaltyCard from "../components/modals/action modals/DeleteLoyaltyCard"

@@ -47,11 +47,11 @@ const AddUser = (props) => {
                     <InputField placeholder="Branch" />
                     <InputField placeholder="Email" />
                     <InputField placeholder="Mobile Number" />
-                    <Grid container columns={2}>
+                    <Grid container columns={2} >
                         <Grid item xs={1} >
-                            <Text name="Active" variant="p" component="div" fontWeight="bold" />
+                            <Text name="Active" variant="h6" component="div" fontWeight="bold" />
                         </Grid>
-                        <Grid item xs={1} >
+                        <Grid item xs={1} textAlign="right" >
                             <Switch size="medium" />
                         </Grid>
                     </Grid>
@@ -59,7 +59,7 @@ const AddUser = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Grid container columns={1}>
-                        <Grid item xs={12} textAlign="left">
+                        <Grid item xs={12} textAlign="left" padding={1}>
                             <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "40%" }} > Save </SubmitButton>
                         </Grid>
                     </Grid>

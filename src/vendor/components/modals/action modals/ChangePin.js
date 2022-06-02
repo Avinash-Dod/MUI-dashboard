@@ -2,8 +2,7 @@
 import { Dialog, DialogContent, Box, Grid, DialogTitle } from "@mui/material"
 import { SubmitButton } from "../../../../components/UI/UI";
 import { Text } from "../../../styles/styledComponents";
-import DeleteIcon from '../../../assets/delete-icon-modal.png'
-import { AddUserOTP, MenuIconSx } from "../../../styles/VendorSx";
+import { AddUserOTP } from "../../../styles/VendorSx";
 
 const ChangePin = (props) => {
     const handleClose = () => {
@@ -18,7 +17,7 @@ const ChangePin = (props) => {
             aria-describedby="alert-dialog-description"
             scroll="body" fullWidth      >
 
-<DialogTitle id="alert-dialog-title">
+            <DialogTitle id="alert-dialog-title">
                 <Text name="Change Pin" variant="h4" component="div" color="#30AADD" textAlign="center" fontWeight="bold" />
                 {/* <IconButton onClick={handleClose} sx={{ width: "10%", float: "right", position: "relative" }}>
                     <Close />
@@ -28,7 +27,7 @@ const ChangePin = (props) => {
 
             <DialogContent>
                 <Box sx={{ textAlign: "center", padding: 5 }}>
-                   <Text name="Enter Your Old Pin" variant="body1" component="div" fontWeight="bold" textAlign="left" mb="3%" />
+                    <Text name="Enter Your Old Pin" variant="body1" component="div" fontWeight="bold" textAlign="left" mb="3%" />
                     <form >
                         <Grid container columns={4}>
 
@@ -84,7 +83,7 @@ const ChangePin = (props) => {
 
                     </form>
 
-                    <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "50%",mt:"4%" }} > Save </SubmitButton>
+                    <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "50%", mt: "4%" }} > Save </SubmitButton>
 
                 </Box>
             </DialogContent>

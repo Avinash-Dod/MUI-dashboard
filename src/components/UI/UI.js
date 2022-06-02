@@ -1,4 +1,3 @@
-
 import { ModeEdit } from "@mui/icons-material"
 import { Avatar, Button, Card, CardContent, Container, Dialog, Input, ListItem, MenuItem, styled, TextField, Typography } from "@mui/material"
 
@@ -26,7 +25,7 @@ export const PageText = (props) => {
 export const SideList = (props) => {
     const { Text } = props
     return (
-        <ListItem >
+        <ListItem sx={{padding:"0%"}} >
             <ListHeading variant="p" component="span"   >
                 {Text}
             </ListHeading>
@@ -73,7 +72,7 @@ export const LoginCard = (props) => {
 export const CardButton = (props) => {
     const { size, startIcon, endIcon, name, onClick } = props
     return (
-        <Button size={size} onClick={onClick} startIcon={startIcon} endIcon={endIcon} variant="contained" sx={{ color: "#ffffff" }}>{name} </Button>
+        <Button size={size} onClick={onClick} startIcon={startIcon} endIcon={endIcon} variant="contained" sx={{ color: "#ffffff",padding:"8px 36px" ,fontSize:"16px"}} >{name} </Button>
     )
 }
 // styled components
@@ -84,7 +83,7 @@ width:100%;
 padding: 12px 14px 14px 12px;
 font-size: 16px;
 font-weight: 400;
-line-height: 20px;
+line-height:20px;
 color: #fff;
 &:hover{
     color:#30AADD;
@@ -96,12 +95,13 @@ color: #fff;
 `;
 
 export const PageContainer = styled(Container)`
-width: 83%;
+width:83%;
 position: relative;
 left: 16%;
 background:#fafafa;
-top: 72px;
-height:100%;
+top: 70px;
+height:{xs:'100%'};
+
 } 
 `;
 

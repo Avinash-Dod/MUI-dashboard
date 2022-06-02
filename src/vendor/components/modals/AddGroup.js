@@ -95,7 +95,7 @@ const AddGroup = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Grid container columns={1}>
-                        <Grid item xs={12} textAlign="left">
+                        <Grid item xs={12} textAlign="left" padding={1}>
                             <SubmitButton variant="contained" onClick={handleClose} size="medium" sx={{ width: "40%" }} > Save </SubmitButton>
                         </Grid>
                     </Grid>
